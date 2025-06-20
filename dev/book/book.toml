@@ -1,0 +1,11 @@
+[book]
+authors = ["Victor Borja"]
+language = "en"
+src = "src"
+title = "Dendrix - Community driven Dendritic Nix configurations."
+
+[output.html]
+additional-js = ["./theme/dendrix_repos.js", "./theme/elm.js", "./theme/elm-init.js"]
+additional-css = ["./theme/catppuccin.css"]
+default-theme = "latte"
+preferred-dark-theme = "mocha"

@@ -1,0 +1,74 @@
+{
+  "concurrency": {
+    "cancel-in-progress": true,
+    "group": "pages"
+  },
+  "jobs": {
+    "deploy": {
+      "environment": {
+        "name": "github-pages",
+        "url": "${{steps.deployment.outputs.page_url}}"
+      },
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "uses": "actions/checkout@v4"
+        },
+        {
+          "uses": "wimpysworld/nothing-but-nix@main",
+          "with": {
+            "hatchet-protocol": "holster"
+          }
+        },
+        {
+          "uses": "DeterminateSystems/nix-installer-action@main"
+        },
+        {
+          "uses": "DeterminateSystems/magic-nix-cache-action@main"
+        },
+        {
+          "name": "flake check",
+          "run": "nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs"
+        },
+        {
+          "name": "gen book",
+          "run": "nix run nixpkgs#mdbook -- build dev/book"
+        },
+        {
+          "uses": "actions/configure-pages@v5"
+        },
+        {
+          "uses": "actions/upload-pages-artifact@v3",
+          "with": {
+            "path": "./dev/book/book"
+          }
+        },
+        {
+          "id": "deployment",
+          "uses": "actions/deploy-pages@v4"
+        }
+      ]
+    }
+  },
+  "name": "gh-pages",
+  "on": {
+    "push": {
+      "branches": [
+        "main"
+      ],
+      "paths": [
+        "dev/book/**",
+        "dev/elm/**",
+        "aspects/**",
+        "dev/npins/**"
+      ]
+    },
+    "workflow_call": {},
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read",
+    "id-token": "write",
+    "pages": "write"
+  }
+}

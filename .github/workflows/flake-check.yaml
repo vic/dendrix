@@ -1,0 +1,42 @@
+{
+  "concurrency": {
+    "cancel-in-progress": true,
+    "group": "test"
+  },
+  "jobs": {
+    "check": {
+      "environment": {
+        "name": "check",
+        "url": "${{steps.check.outputs.page_url}}"
+      },
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "uses": "actions/checkout@v4"
+        },
+        {
+          "uses": "wimpysworld/nothing-but-nix@main",
+          "with": {
+            "hatchet-protocol": "holster"
+          }
+        },
+        {
+          "uses": "DeterminateSystems/nix-installer-action@main"
+        },
+        {
+          "uses": "DeterminateSystems/magic-nix-cache-action@main"
+        },
+        {
+          "id": "check",
+          "run": "nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs"
+        }
+      ]
+    }
+  },
+  "name": "flake check",
+  "on": {
+    "push": {},
+    "workflow_call": {},
+    "workflow_dispatch": {}
+  }
+}
