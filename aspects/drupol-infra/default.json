@@ -1,219 +1,219 @@
 {
   "ai": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/ai/tika/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/ai/searx.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/ai/open-webui.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/ai/ollama.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/ai/litellm/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/ai/docling-serve.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/tika/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/searx.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/open-webui.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/ollama.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/litellm/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/docling-serve.nix"
     ]
   },
   "base": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/flake-parts/unfree-packages.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/yubikey.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/xdg.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/system/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/podman.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/passwords-mgmt/password-store.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/home.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/editors/micro.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/command-not-found.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/flake-parts/unfree-packages.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/yubikey.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/xdg.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/system/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/podman.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/passwords-mgmt/password-store.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/home.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/editors/micro.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/command-not-found.nix"
     ],
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/flake-parts/unfree-packages.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/yubikey.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/time/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/system/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/system/auto-upgrade/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/services.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/security/sudo-rs.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/security/rtkit.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/power-mgmt/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/nix.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/network/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/i18n.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/documentation.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/console/console.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/command-not-found.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/boot/kernel.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/boot/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/admin/nh.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/base/accessibility/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/flake-parts/unfree-packages.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/yubikey.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/time/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/system/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/system/auto-upgrade/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/services.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/security/sudo-rs.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/security/rtkit.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/power-mgmt/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/nix.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/network/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/i18n.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/documentation.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/console/console.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/command-not-found.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/boot/kernel.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/boot/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/admin/nh.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/accessibility/default.nix"
     ]
   },
   "bluetooth": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/bluetooth/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/bluetooth/default.nix"
     ]
   },
   "desktop": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/desktop/web-browsers/firefox.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/desktop/fonts/fonts.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/desktop/environment/kdeplasma.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/desktop/environment/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/web-browsers/firefox.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/fonts/fonts.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/kdeplasma.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/default.nix"
     ],
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/desktop/fonts/fonts.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/desktop/environment/winbox.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/desktop/environment/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/fonts/fonts.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/winbox.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/default.nix"
     ]
   },
   "dev": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/xdg.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/languages/nix.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/git/mergiraf.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/git/lazygit.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/git/jujutsu.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/git/gpg.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/git/git.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/git/gh.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/git/gh-dash.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/editors/zeditor.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/editors/vscode.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/xdg.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/languages/nix.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/mergiraf.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/lazygit.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/jujutsu.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/gpg.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/git.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/gh.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/gh-dash.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/editors/zeditor.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/editors/vscode.nix"
     ],
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/dev/editors/vscode.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/editors/vscode.nix"
     ]
   },
   "displaylink": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/work/displaylink.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/work/displaylink.nix"
     ]
   },
   "email": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/email/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/email/default.nix"
     ]
   },
   "facter": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/facter/facter.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/facter/facter.nix"
     ],
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/facter/facter.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/facter/facter.nix"
     ]
   },
   "fwupd": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/fwupd/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/fwupd/default.nix"
     ]
   },
   "games": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/games/enemy-territory.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/games/enemy-territory.nix"
     ]
   },
   "guacamole": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/guacamole/guacamole.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/guacamole/guacamole.nix"
     ]
   },
   "hosts/nixos": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/nixos/networking.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/nixos/fileSystems.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/nixos/facter.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/nixos/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/nixos/boot.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/networking.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/boot.nix"
     ]
   },
   "hosts/x13": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x13/services.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x13/programs.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x13/hardware.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x13/fileSystems.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x13/facter.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x13/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x13/boot.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x13/services.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x13/programs.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x13/hardware.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x13/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x13/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x13/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x13/boot.nix"
     ]
   },
   "hosts/x260": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x260/services.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x260/fileSystems.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x260/facter.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x260/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x260/boot.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/services.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/boot.nix"
     ]
   },
   "hosts/x280": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x280/services.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x280/fileSystems.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x280/facter.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x280/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/x280/boot.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x280/services.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x280/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x280/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x280/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x280/boot.nix"
     ]
   },
   "hosts/xeonixos": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/xeonixos/nvidia.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/xeonixos/fileSystems.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/xeonixos/facter.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/xeonixos/default.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/hosts/xeonixos/boot.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/nvidia.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/boot.nix"
     ]
   },
   "messaging": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/messaging/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/messaging/default.nix"
     ]
   },
   "openssh": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/openssh/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/openssh/default.nix"
     ]
   },
   "pol": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/users/pol/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/users/pol/default.nix"
     ]
   },
   "root": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/users/root/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/users/root/default.nix"
     ]
   },
   "shell": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/zoxide.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/starship.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/ripgrep.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/nix-your-shell.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/htop.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/ghostty.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/fzf.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/fish.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/eza.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/direnv.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/bottom.nix",
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/bat.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/zoxide.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/starship.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/ripgrep.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/nix-your-shell.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/htop.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/ghostty.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/fzf.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/fish.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/eza.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/direnv.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/bottom.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/bat.nix"
     ],
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/shell/fish.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/fish.nix"
     ]
   },
   "sound": {
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/sound/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/sound/default.nix"
     ]
   },
   "vpn": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/vpn/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/vpn/default.nix"
     ],
     "nixos": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/vpn/default.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/vpn/default.nix"
     ]
   },
   "work": {
     "homeManager": [
-      "/nix/store/4zxyzmx47c18n0mq7jcxalq9fh8fvjqf-source/modules/work/aws.nix"
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/work/aws.nix"
     ]
   }
 }

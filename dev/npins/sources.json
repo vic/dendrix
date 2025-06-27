@@ -22,9 +22,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "77ff5ed8cfb1d2cd97bc809d9eeb1489884490b6",
-      "url": "https://github.com/dliberalesso/nix-config/archive/77ff5ed8cfb1d2cd97bc809d9eeb1489884490b6.tar.gz",
-      "hash": "1zmg3455hk807gy1882744ga9kv0b62ws9021l3yq7bjbl3byynf"
+      "revision": "499b5a0ace8323a21e2fa28f94daafd03a7958c7",
+      "url": "https://github.com/dliberalesso/nix-config/archive/499b5a0ace8323a21e2fa28f94daafd03a7958c7.tar.gz",
+      "hash": "0wvpxmdifv2rsn56adan2m42ly6g0y9psbc0f02rkcrismmwrz5l"
     },
     "drupol-infra": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "39862dccfba7eacb532373500075fc2ddd17c366",
-      "url": "https://github.com/drupol/infra/archive/39862dccfba7eacb532373500075fc2ddd17c366.tar.gz",
-      "hash": "1fzmgqn11bkjxd2dpjqmq9vrpq45sspxw95paszhl7v33mpasclb"
+      "revision": "a10da3a0e88d17566918fa8db69fa0faa9e1d0c8",
+      "url": "https://github.com/drupol/infra/archive/a10da3a0e88d17566918fa8db69fa0faa9e1d0c8.tar.gz",
+      "hash": "0sa6psv1k7crlzlz1a3zac8ldwvbr3w26x5awlbpxyv7f67fr5z3"
     },
     "gaetanlepage-nix-config": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "e8a444df27abfb7d364cde831e7c6189f2ae013d",
-      "url": "https://github.com/icyd/nixvim/archive/e8a444df27abfb7d364cde831e7c6189f2ae013d.tar.gz",
-      "hash": "0sy0lg8kndwj0rignbg061pf3q5jhqnqh8069d8x4ys9jpphibfh"
+      "revision": "6bf416ad3ba76a24afb287fa989561f5bcde1bd2",
+      "url": "https://github.com/icyd/nixvim/archive/6bf416ad3ba76a24afb287fa989561f5bcde1bd2.tar.gz",
+      "hash": "161kiiq4ih6jl98bynhsx2rbl1qfjnwnaign6wy3r4b9dqlwvk39"
     },
     "quasigod-nixconfig": {
       "type": "Git",

@@ -1,161 +1,161 @@
 {
   "additional-plugins": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/additional-plugins.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/additional-plugins.nix"
     ]
   },
   "auto-session": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/auto-session.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/auto-session.nix"
     ]
   },
   "colorizer": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/colorizer.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/colorizer.nix"
     ]
   },
   "compiler": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/compiler.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/compiler.nix"
     ]
   },
   "completion": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/completion.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/completion.nix"
     ]
   },
   "core": {
     "config": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/configs/core.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/configs/core.nix"
     ],
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/core/options.nix",
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/core/keybindings.nix",
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/core/default.nix",
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/core/autocmds.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/options.nix",
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/keybindings.nix",
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/default.nix",
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/autocmds.nix"
     ]
   },
   "debug": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/debug.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/debug.nix"
     ]
   },
   "dial": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/dial.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/dial.nix"
     ]
   },
   "firenvim": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/firenvim.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/firenvim.nix"
     ]
   },
   "full": {
     "config": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/configs/full.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/configs/full.nix"
     ]
   },
   "git": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/git.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/git.nix"
     ]
   },
   "harpoon": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/harpoon.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/harpoon.nix"
     ]
   },
   "lsp": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/lsp/otter.nix",
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/lsp/lint.nix",
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/lsp/format.nix",
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/lsp/default.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/otter.nix",
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/lint.nix",
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/format.nix",
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/default.nix"
     ]
   },
   "markdown": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/markdown.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/markdown.nix"
     ]
   },
   "maximize": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/maximize.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/maximize.nix"
     ]
   },
   "navigator": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/navigator.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/navigator.nix"
     ]
   },
   "neorg": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/neorg.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/neorg.nix"
     ]
   },
   "oil": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/oil.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/oil.nix"
     ]
   },
   "optimizations": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/optimizations.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/optimizations.nix"
     ]
   },
   "overseer": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/overseer.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/overseer.nix"
     ]
   },
   "project-nvim": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/project-nvim.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/project-nvim.nix"
     ]
   },
   "telescope": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/telescope.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/telescope.nix"
     ]
   },
   "tests": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/tests.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/tests.nix"
     ]
   },
   "todo-comments": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/todo-comments.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/todo-comments.nix"
     ]
   },
   "treesitter": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/treesitter.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/treesitter.nix"
     ]
   },
   "trouble": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/trouble.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/trouble.nix"
     ]
   },
   "ufo": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/ufo.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/ufo.nix"
     ]
   },
   "ui": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/ui.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/ui.nix"
     ]
   },
   "utils": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/utils.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/utils.nix"
     ]
   },
   "yanky": {
     "nixvim": [
-      "/nix/store/ylczs734n6s8nw7w6lsibzi6sni3qgw5-source/modules/yanky.nix"
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/yanky.nix"
     ]
   }
 }

@@ -22,7 +22,7 @@ Dendrix knows of <b>8</b> [dendritic repositories](https://github.com/vic/dendri
 9 [import-trees](https://github.com/vic/dendrix/tree/main/dev/modules/community).
 9 flags.
 161 aspects accross 9 different nix configuration classes.
-614 nix configuration files.
+613 nix configuration files.
 
 </summary>
 
@@ -110,19 +110,19 @@ Maka-77x-nixconf7's ./modules tree
 
 </details>
 
-### [dliberalesso-nix-config](https://github.com/dliberalesso/nix-config/tree/77ff5ed8cfb1d2cd97bc809d9eeb1489884490b6/modules)
+### [dliberalesso-nix-config](https://github.com/dliberalesso/nix-config/tree/499b5a0ace8323a21e2fa28f94daafd03a7958c7/modules)
 
 <details>
 <summary>
 
-dliberalesso-nix-config at rev 77ff5ed.
+dliberalesso-nix-config at rev 499b5a0.
 1 dendritic trees.
 <b>8</b> aspects across 2 nix classes.
-86 nix configuration files.
+85 nix configuration files.
 
 </summary>
 
-[README](https://github.com/dliberalesso/nix-config/tree/77ff5ed8cfb1d2cd97bc809d9eeb1489884490b6/README.md)
+[README](https://github.com/dliberalesso/nix-config/tree/499b5a0ace8323a21e2fa28f94daafd03a7958c7/README.md)
 
 <details>
 <summary>
@@ -151,7 +151,7 @@ dliberalesso-nix-config at rev 77ff5ed.
 
 No community notes on dliberalesso-nix-config. Use the source, Luke.
 
-- default: [`modules`](https://github.com/dliberalesso/nix-config/tree/77ff5ed8cfb1d2cd97bc809d9eeb1489884490b6/modules)
+- default: [`modules`](https://github.com/dliberalesso/nix-config/tree/499b5a0ace8323a21e2fa28f94daafd03a7958c7/modules)
 
 dliberalesso-nix-config's ./modules tree
 
@@ -166,19 +166,19 @@ dliberalesso-nix-config's ./modules tree
 
 </details>
 
-### [drupol-infra](https://github.com/drupol/infra/tree/39862dccfba7eacb532373500075fc2ddd17c366/modules)
+### [drupol-infra](https://github.com/drupol/infra/tree/a10da3a0e88d17566918fa8db69fa0faa9e1d0c8/modules)
 
 <details>
 <summary>
 
-drupol-infra at rev 39862dc.
+drupol-infra at rev a10da3a.
 1 dendritic trees.
 <b>24</b> aspects across 2 nix classes.
 107 nix configuration files.
 
 </summary>
 
-[README](https://github.com/drupol/infra/tree/39862dccfba7eacb532373500075fc2ddd17c366/README.md)
+[README](https://github.com/drupol/infra/tree/a10da3a0e88d17566918fa8db69fa0faa9e1d0c8/README.md)
 
 <details>
 <summary>
@@ -239,7 +239,7 @@ drupol-infra at rev 39862dc.
 
 No community notes on drupol-infra. Use the source, Luke.
 
-- default: [`modules`](https://github.com/drupol/infra/tree/39862dccfba7eacb532373500075fc2ddd17c366/modules)
+- default: [`modules`](https://github.com/drupol/infra/tree/a10da3a0e88d17566918fa8db69fa0faa9e1d0c8/modules)
 
 drupol-infra's ./modules tree
 
@@ -482,19 +482,19 @@ henrysipp-nix-setup's ./modules tree
 
 </details>
 
-### [icyd-nixvim](https://github.com/icyd/nixvim/tree/e8a444df27abfb7d364cde831e7c6189f2ae013d/modules)
+### [icyd-nixvim](https://github.com/icyd/nixvim/tree/6bf416ad3ba76a24afb287fa989561f5bcde1bd2/modules)
 
 <details>
 <summary>
 
-icyd-nixvim at rev e8a444d.
+icyd-nixvim at rev 6bf416a.
 1 dendritic trees.
 <b>30</b> aspects across 2 nix classes.
 41 nix configuration files.
 
 </summary>
 
-[README](https://github.com/icyd/nixvim/tree/e8a444df27abfb7d364cde831e7c6189f2ae013d/README.md)
+[README](https://github.com/icyd/nixvim/tree/6bf416ad3ba76a24afb287fa989561f5bcde1bd2/README.md)
 
 <details>
 <summary>
@@ -567,7 +567,7 @@ icyd-nixvim at rev e8a444d.
 
 No community notes on icyd-nixvim. Use the source, Luke.
 
-- default: [`modules`](https://github.com/icyd/nixvim/tree/e8a444df27abfb7d364cde831e7c6189f2ae013d/modules)
+- default: [`modules`](https://github.com/icyd/nixvim/tree/6bf416ad3ba76a24afb287fa989561f5bcde1bd2/modules)
 
 icyd-nixvim's ./modules tree
 
