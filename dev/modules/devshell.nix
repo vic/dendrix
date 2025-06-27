@@ -14,6 +14,11 @@
             help = "run npins inside dev";
             command = "(cd dev; ${pkgs.npins}/bin/npins \"$@\" )";
           }
+          {
+            name = "book";
+            help = "serve dev/book";
+            command = "${pkgs.mdbook}/bin/mdbook serve dev/book";
+          }
         ];
       };
     };

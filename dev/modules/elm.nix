@@ -40,6 +40,7 @@ in
           drv = pkgs.writers.writeText "elm.js" (builtins.readFile "${elm_js}/elm.min.js");
         }
       ];
+      devshells.default.packages = [ pkgs.elmPackages.elm ];
       devshells.default.commands = [
         {
           name = "elm-build";

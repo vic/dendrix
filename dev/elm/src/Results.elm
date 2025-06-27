@@ -4,14 +4,13 @@ import Browser
 import Data
 import Deco
 import Dict exposing (Dict)
-import Html exposing (Html, button, code, div, h2, pre, text)
+import Html exposing (Html, button, code, div, pre, text)
 import Html.Attributes exposing (class, id)
 import Html.Events exposing (onClick)
 import Json.Decode as D
 import Json.Encode as E
 import List.Extra
 import Ports
-import Set
 import Tuple
 
 

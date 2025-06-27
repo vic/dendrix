@@ -225,6 +225,18 @@ viewRepoAndTreeCheckboxes model availableRepos =
 
                     isCollapsed =
                         List.member repo.name model.collapsedRepos
+
+                    replaceArchivePath =
+                        if String.contains "codeberg.org" repo.url then
+                            String.replace "/archive/" "/src/commit/"
+
+                        else
+                            String.replace "/archive/" "/tree/"
+
+                    repoHome =
+                        repo.url
+                            |> String.replace ".tar.gz" ""
+                            |> replaceArchivePath
                 in
                 div [ style "margin-bottom" "1em" ]
                     [ div [ style "display" "flex", style "align-items" "center" ]
@@ -253,7 +265,10 @@ viewRepoAndTreeCheckboxes model availableRepos =
                             , text repo.name
                             ]
                         , div [ style "cursor" "pointer", onClick (ToggleCollapse repo.name), style "margin-left" "auto", style "display" "flex", style "align-items" "center" ]
-                            [ span [ style "margin-left" "5px", style "width" "1em" ]
+                            [ span [ style "margin-right" "5px" ]
+                                [ small [] [ a [ href repoHome ] [ text "(home)" ] ]
+                                ]
+                            , span [ style "margin-left" "5px", style "width" "1em" ]
                                 [ text
                                     (if isCollapsed then
                                         "►"
@@ -284,6 +299,9 @@ viewRepoAndTreeCheckboxes model availableRepos =
 
                                         files =
                                             tree.aspects |> List.concatMap (\a -> a.files)
+
+                                        filesUrl =
+                                            "https://github.com/vic/dendrix/blob/main/aspects/" ++ repo.name ++ "/" ++ tree.name ++ ".json"
                                     in
                                     div [ style "margin-left" "auto", style "display" "flex" ]
                                         [ label
@@ -311,7 +329,7 @@ viewRepoAndTreeCheckboxes model availableRepos =
                                             , text tree.name
                                             ]
                                         , div [ style "margin-left" "auto", style "display" "flex", style "align-items" "center" ]
-                                            [ a [ href "https://github.com" ] [ text ((files |> List.length |> String.fromInt) ++ " files") ]
+                                            [ a [ href filesUrl ] [ text ((files |> List.length |> String.fromInt) ++ " files") ]
                                             ]
                                         ]
                                 )
