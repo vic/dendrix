@@ -19,7 +19,7 @@ let
   inherit (inputs) flake-compat flake-parts;
   system = "x86_64-linux";
   discoverAspects =
-    _repo-name: src: _tree-name: import-tree:
+    src: import-tree:
     let
       flake = import flake-compat { inherit src system; };
       flake-inputs = flake.outputs.inputs;

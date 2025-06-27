@@ -28,10 +28,10 @@ let
 
   all-nix-files = on-all-trees (t: t.import-tree.files);
   all-flags = on-all-trees (t: t.import-tree.availableFlags);
-  all-aspects = on-all-trees (t: lib.attrNames t.discover-aspects);
+  all-aspects = on-all-trees (t: lib.attrNames t.aspects);
   all-classes = on-all-trees (
     t:
-    lib.pipe t.discover-aspects [
+    lib.pipe t.aspects [
       (lib.attrValues)
       (lib.map lib.attrNames)
       (lib.flatten)
@@ -72,14 +72,14 @@ let
       defaultPath = repo.trees.default.subdir;
       repo-aspects = lib.pipe repo.trees [
         (lib.attrValues)
-        (lib.map (t: t.discover-aspects))
+        (lib.map (t: t.aspects))
         (lib.map (lib.attrNames))
         (lib.flatten)
         (lib.unique)
       ];
       repo-clases = lib.pipe repo.trees [
         (lib.attrValues)
-        (lib.map (t: t.discover-aspects))
+        (lib.map (t: t.aspects))
         (lib.map (lib.attrValues))
         (lib.flatten)
         (lib.map (lib.attrNames))
@@ -100,7 +100,7 @@ let
       '';
       definedAspects = lib.pipe repo.trees [
         (lib.attrValues)
-        (lib.map (t: t.discover-aspects))
+        (lib.map (t: t.aspects))
         (lib.map (
           lib.mapAttrsToList (
             aspect: classes: ''

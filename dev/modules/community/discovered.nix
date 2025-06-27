@@ -14,14 +14,14 @@
           files.files = [
             {
               inherit path_;
-              drv = pkgs.writers.writeJSON name tree.discover-aspects;
+              drv = pkgs.writers.writeJSON name tree.aspects;
             }
           ];
         };
 
       elmTree = tree-name: tree: {
         name = tree-name;
-        aspects = lib.pipe tree.discover-aspects [
+        aspects = lib.pipe tree.aspects [
           (lib.mapAttrsToList (
             aspect:
             lib.mapAttrsToList (

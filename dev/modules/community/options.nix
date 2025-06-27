@@ -35,26 +35,23 @@ let
           repo-cfg = config;
         in
         {
+          config = {
+            trees.default.subdir = lib.mkDefault (
+              if builtins.pathExists "${sources.${name}}/modules/community" then
+                "modules/community"
+              else
+                "modules"
+            );
+          };
           options = {
             readme = mkOption {
               description = "Notes about using ${name} shared modules.";
               default = "No community notes on ${name}. Use the source, Luke.";
               type = types.str;
             };
-            required-inputs = mkOption {
-              description = "inputs required from ${repo-name} flake.";
-              default = [ ];
-              type = types.listOf types.str;
-            };
             trees = mkOption {
               description = "import-tree's of shared modules";
-              default = {
-                default.subdir =
-                  if builtins.pathExists "${sources.${name}}/modules/community" then
-                    "modules/community"
-                  else
-                    "modules";
-              };
+              default = { };
               type = types.lazyAttrsOf (
                 types.submodule (
                   { name, config, ... }:
@@ -81,27 +78,24 @@ let
                         readOnly = true;
                         type = types.listOf types.str;
                       };
-                      aspects = mkOption {
-                        description = "Cached aspects";
-                        default = builtins.fromJSON (builtins.readFile ./discovered/${"${repo-name}/aspects/${name}.json"});
-                        readOnly = true;
-                        type = types.listOf (types.attrsOf types.str);
-                      };
-                      discover-aspects = mkOption {
-                        description = "Runtime discovery of aspects. This will download sources and inputs.";
-                        default = discoverAspects repo-name repo-cfg.source name config.import-tree;
-                        readOnly = true;
-                        type = types.attrsOf (types.attrsOf (types.listOf types.str));
-                      };
+                      aspects =
+                        let
+                          # cache-file = ./discovered-aspects/${"${repo-name}/${name}.json"};
+                          # cache-exists = builtins.fileExists cache-file;
+                          # cache-contents = builtins.fromJSON (builtins.readFile cache-file);
+                          # cached = if cache-exists then cache-contents else {};
+                          discovered = discoverAspects repo-cfg.source config.import-tree;
+                        in
+                        mkOption {
+                          description = "aspects provided on this tree";
+                          default = discovered;
+                          readOnly = true;
+                          type = types.attrsOf (types.attrsOf (types.listOf types.str));
+                        };
                       import-tree = mkOption {
                         description = "${name} import-tree";
                         type = types.unspecified;
                         default = createSubTree repo-cfg config;
-                      };
-                      required-inputs = mkOption {
-                        description = "inputs required from ${repo-name} flake.";
-                        default = [ ];
-                        type = types.listOf types.str;
                       };
                     };
                   }
