@@ -105,6 +105,12 @@ viewSelectedRepos model =
 
         classesCount =
             Dict.values aspectClassMap |> List.concatMap identity |> List.Extra.unique |> List.length |> String.fromInt
+
+        firstAspect =
+            Dict.keys aspectClassMap |> List.head |> Maybe.withDefault "virtualisation"
+
+        firstClass =
+            Dict.get firstAspect aspectClassMap |> Maybe.andThen List.head |> Maybe.withDefault "nixos"
     in
     [ div [] [ button [ onClick ClearFilters ] [ text "Reset filters" ] ]
     , p []
@@ -118,6 +124,21 @@ viewSelectedRepos model =
         , text " to include these configuration modules."
         ]
     , viewUsageCode model.repos
+    , p []
+        [ text "Then on any flake module of yours, extend any of these aspects with your custom configs, like:"
+        , div []
+            [ pre []
+                [ code [ class "language-nix" ]
+                    [ text ("""# modules/${aspect}.nix
+{
+  # eg flake.modules.""" ++ firstClass ++ "." ++ firstAspect ++ """ = { ... };
+  flake.modules.${class}.${aspect} = { <your-configs> };
+}
+                    """)
+                    ]
+                ]
+            ]
+        ]
     ]
 
 
