@@ -17,7 +17,7 @@
           {
             name = "book";
             help = "serve dev/book";
-            command = "elm-build && ${pkgs.mdbook}/bin/mdbook serve dev/book";
+            command = "elm-check && elm-build && ${pkgs.mdbook}/bin/mdbook serve dev/book";
           }
         ];
       };

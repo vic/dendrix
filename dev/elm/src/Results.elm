@@ -4,7 +4,7 @@ import Browser
 import Data
 import Deco
 import Dict exposing (Dict)
-import Html exposing (Html, button, code, div, pre, text)
+import Html exposing (Html, button, code, div, p, pre, text)
 import Html.Attributes exposing (class, id)
 import Html.Events exposing (onClick)
 import Json.Decode as D
@@ -99,15 +99,25 @@ viewSelectedRepos model =
                             dict
                     )
                     Dict.empty
+
+        aspectCount =
+            Dict.keys aspectClassMap |> List.length |> String.fromInt
+
+        classesCount =
+            Dict.values aspectClassMap |> List.concatMap identity |> List.Extra.unique |> List.length |> String.fromInt
     in
     [ div [] [ button [ onClick ClearFilters ] [ text "Reset filters" ] ]
-    , div []
-        ([ text (String.fromInt totalFiles ++ " files\n")
-         , text "contaning the following aspects:\n"
-         ]
-            ++ viewAspectSummary aspectClassMap
-        )
-    , viewUsage model.repos
+    , p []
+        [ text (String.fromInt totalFiles ++ " nix files\n")
+        , text ("contaning the following " ++ aspectCount ++ " aspects across " ++ classesCount ++ " configuration classes:\n")
+        ]
+    , p [] (viewAspectSummary aspectClassMap)
+    , p []
+        [ text "Add the following to your "
+        , code [] [ text "flake.nix" ]
+        , text " to include these configuration modules."
+        ]
+    , viewUsageCode model.repos
     ]
 
 
@@ -126,8 +136,8 @@ viewAspectSummary aspectDict =
             )
 
 
-viewUsage : List Data.Repository -> Html msg
-viewUsage repos =
+viewUsageCode : List Data.Repository -> Html msg
+viewUsageCode repos =
     pre [ id "dendrix-usage" ]
         [ code [ class "language-nix" ]
             [ let
@@ -142,7 +152,7 @@ viewUsage repos =
                         trees
 
                 codes =
-                    [ """# Usage in your flake: 
+                    [ """# flake.nix
 {
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } 
     (inputs.import-tree [
