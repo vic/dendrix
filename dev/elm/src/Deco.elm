@@ -47,6 +47,7 @@ repositoryEncoder : Repository -> E.Value
 repositoryEncoder repo =
     E.object
         [ ( "name", E.string repo.name )
+        , ( "url", E.string repo.url )
         , ( "trees", E.list treeEncoder repo.trees )
         ]
 

@@ -45,7 +45,7 @@ in
         {
           name = "elm-build";
           help = "compile elm debug mode";
-          command = "cd dev/elm; elm make --debug --output ${path_} ${main} \"$@\" ";
+          command = "cd dev/elm; elm make --debug --output ../../${path_} ${main} \"$@\" ";
         }
       ];
     };
