@@ -67,39 +67,3 @@ aspectInfoEncoder info =
         , ( "class", E.string info.class )
         , ( "files", E.list E.string info.files )
         ]
-
-
-jsonString : String
-jsonString =
-    """
-{
-  "repositories": [
-    {
-      "name": "vic-vix",
-      "trees": [
-         {
-            "name": "default",
-            "aspects": [
-               { "aspect": "game", "class": "darwin", "files": ["file1", "file2"] },
-               { "aspect": "game", "class": "nixos", "files": ["file3"] },
-               { "aspect": "dev", "class": "nixos", "files": ["file3nixos"] },
-               { "aspect": "dev", "class": "darwin", "files": ["file3darwin"] }
-            ]
-         }
-      ]
-    },
-    {
-        "name": "drupol-infra",
-        "trees": [
-            {
-                "name": "default",
-                "aspects": [
-                    { "aspect": "dev", "class": "nixos", "files": ["a.nix"]},
-                    { "aspect": "ai", "class": "nixos", "files": ["b.nix"]}
-                ]
-            }
-        ]
-    }
-  ]
-}
-"""
