@@ -128,7 +128,7 @@ And any file inside modules can contribute to flake outputs (packages/checks/osC
 ```nix
 # modules/flake/formatter.nix
 {
-  petSystem = {pkgs, ...}: {
+  perSystem = {pkgs, ...}: {
     formatter = pkgs.alejandra;
   };
 }
