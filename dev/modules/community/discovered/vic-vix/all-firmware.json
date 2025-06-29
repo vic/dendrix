@@ -1,0 +1,7 @@
+{
+  "all-firmware": {
+    "nixos": [
+      "/nix/store/grfxh7izx1kk762gsfqc0ijm9zsy1id8-source/modules/community/features/all-firmware.nix"
+    ]
+  }
+}

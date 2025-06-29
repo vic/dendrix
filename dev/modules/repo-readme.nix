@@ -69,7 +69,6 @@ let
     name: repo:
     let
       rev = builtins.substring 0 7 repo.source.revision;
-      defaultPath = repo.trees.default.subdir;
       repo-aspects = lib.pipe repo.trees [
         (lib.attrValues)
         (lib.map (t: t.aspects))
@@ -114,7 +113,7 @@ let
         (lib.concatStringsSep "\n")
       ];
       text = ''
-        ### [${name}](${repoHome repo}/${defaultPath})
+        ### [${name}](${repoHome repo}
 
         <details>
         <summary>
@@ -143,10 +142,10 @@ let
     text;
 
   repoTree =
-    repoName: repo: name: tree:
+    repoName: _repo: name: tree:
     let
       text = ''
-        - ${name}: [`${tree.subdir}`](${repoHome repo}/${tree.subdir})
+        - ${name}:
 
         ${tree.readme}
 

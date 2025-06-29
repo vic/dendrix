@@ -1,0 +1,12 @@
+{
+  "ai": {
+    "nixos": [
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/ai/tika/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/ai/searx.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/ai/open-webui.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/ai/ollama.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/ai/litellm/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/ai/docling-serve.nix"
+    ]
+  }
+}

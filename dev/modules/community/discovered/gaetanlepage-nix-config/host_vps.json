@@ -1,0 +1,7 @@
+{
+  "host_vps": {
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/vps/default.nix"
+    ]
+  }
+}

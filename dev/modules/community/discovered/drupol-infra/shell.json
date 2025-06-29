@@ -1,0 +1,21 @@
+{
+  "shell": {
+    "homeManager": [
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/zoxide.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/starship.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/ripgrep.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/nix-your-shell.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/htop.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/ghostty.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/fzf.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/fish.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/eza.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/direnv.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/bottom.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/bat.nix"
+    ],
+    "nixos": [
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/shell/fish.nix"
+    ]
+  }
+}

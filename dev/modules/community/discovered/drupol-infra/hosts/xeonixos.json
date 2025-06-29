@@ -1,0 +1,11 @@
+{
+  "hosts/xeonixos": {
+    "nixos": [
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/nvidia.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/xeonixos/boot.nix"
+    ]
+  }
+}

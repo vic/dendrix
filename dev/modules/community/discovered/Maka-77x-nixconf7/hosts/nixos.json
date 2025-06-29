@@ -1,0 +1,11 @@
+{
+  "hosts/nixos": {
+    "nixos": [
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/hosts/nixos/networking.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/hosts/nixos/fileSystems.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/hosts/nixos/facter.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/hosts/nixos/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/hosts/nixos/boot.nix"
+    ]
+  }
+}

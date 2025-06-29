@@ -1,0 +1,7 @@
+{
+  "firefox": {
+    "homeManager": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/home/desktop/firefox.nix"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "git": {
+    "nixvim": [
+      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/git.nix"
+    ]
+  }
+}

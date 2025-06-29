@@ -1,0 +1,36 @@
+{
+  "base": {
+    "homeManager": [
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/flake-parts/unfree-packages.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/xdg.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/system/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/passwords-mgmt/password-store.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/home.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/editors/micro.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/command-not-found.nix"
+    ],
+    "nixos": [
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/flake-parts/unfree-packages.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/time/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/system.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/system/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/system/auto-upgrade/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/services.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/security/sudo-rs.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/security/rtkit.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/security/pam.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/power-mgmt/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/nix.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/network/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/i18n.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/editors/nano.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/documentation.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/console/console.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/command-not-found.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/boot/kernel.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/boot/default.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/admin/nh.nix",
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/base/accessibility/default.nix"
+    ]
+  }
+}

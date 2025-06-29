@@ -1,0 +1,7 @@
+{
+  "remote-builders": {
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/nixos/dev/remote-builders/default.nix"
+    ]
+  }
+}

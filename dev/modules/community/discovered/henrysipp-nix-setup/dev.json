@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "homeManager": [
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/dev/sapling.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/dev/git.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/dev/editors/vscode.nix"
+    ],
+    "nixos": [
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/dev/sapling.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/dev/packages.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/dev/languages.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/dev/editors/vscode.nix"
+    ]
+  }
+}

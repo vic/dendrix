@@ -4,11 +4,18 @@
   perSystem =
     { pkgs, ... }:
     let
+      imports = [ elmFlag ] ++ generatedTrees;
+
+      generatedTrees = lib.pipe config.flake.community [
+        (lib.mapAttrsToList (repo-name: repo: lib.mapAttrsToList (treeMod repo-name) repo.trees))
+        (lib.flatten)
+      ];
+
       treeMod =
         repo-name: tree-name: tree:
         let
           name = "${repo-name}/${tree-name}.json";
-          path_ = "aspects/${name}";
+          path_ = "dev/modules/community/discovered/${name}";
         in
         {
           files.files = [
@@ -57,27 +64,19 @@
               '';
             };
           in
-          [
-            {
-              files.files = [
-                {
-                  inherit path_;
-                  drv = pkgs.writers.writeText "repos.js" (builtins.readFile compressed);
-                }
-              ];
+          {
+            files.files = [
+              {
+                inherit path_;
+                drv = pkgs.writers.writeText "repos.js" (builtins.readFile compressed);
+              }
+            ];
 
-              treefmt.settings.global.excludes = [ path_ ];
-            }
-          ]
+            treefmt.settings.global.excludes = [ path_ ];
+          }
         )
       ];
 
-      imports =
-        elmFlag
-        ++ lib.pipe config.flake.community [
-          (lib.mapAttrsToList (repo-name: repo: lib.mapAttrsToList (treeMod repo-name) repo.trees))
-          (lib.flatten)
-        ];
     in
     {
       inherit imports;

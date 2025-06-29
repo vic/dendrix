@@ -1,0 +1,10 @@
+{
+  "gawain": {
+    "hosts": [
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/hosts/gawain/hardware-configuration.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/hosts/gawain/default.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/hosts/gawain/boot.nix",
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/base/nvidia/default.nix"
+    ]
+  }
+}

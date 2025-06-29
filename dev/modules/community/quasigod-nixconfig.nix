@@ -4,8 +4,7 @@
     { ... }:
     {
       trees = {
-        # quasigod's hosts is private.
-        default.subdir = "modules";
+        # default.subdir = "modules";
       };
     };
 

@@ -1,0 +1,10 @@
+{
+  "gaming": {
+    "home": [
+      "/nix/store/hbar1bqvkyrjjaal0y5xpqp4yapz75sz-source/modules/modules.nix"
+    ],
+    "nixos": [
+      "/nix/store/hbar1bqvkyrjjaal0y5xpqp4yapz75sz-source/modules/modules.nix"
+    ]
+  }
+}

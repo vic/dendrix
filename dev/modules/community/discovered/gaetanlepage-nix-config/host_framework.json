@@ -1,0 +1,18 @@
+{
+  "host_framework": {
+    "homeManager": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/home/kanshi.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/home/inria.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/home/default.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/home/backup/default.nix"
+    ],
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/wireguard/default.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/misc.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/hardware.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/disko.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/default.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/framework/autofs.nix"
+    ]
+  }
+}

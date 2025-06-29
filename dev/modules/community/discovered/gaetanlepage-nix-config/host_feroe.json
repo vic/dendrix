@@ -1,0 +1,10 @@
+{
+  "host_feroe": {
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/feroe/zfs.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/feroe/wireguard/default.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/feroe/hardware.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/feroe/default.nix"
+    ]
+  }
+}

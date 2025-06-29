@@ -1,0 +1,7 @@
+{
+  "wsl": {
+    "nixos": [
+      "/nix/store/grfxh7izx1kk762gsfqc0ijm9zsy1id8-source/modules/community/features/wsl.nix"
+    ]
+  }
+}

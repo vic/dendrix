@@ -1,0 +1,7 @@
+{
+  "fwupd": {
+    "nixos": [
+      "/nix/store/qc1p9kh92f9s1nz5wq6n0p3h9xmlm7g7-source/modules/fwupd/default.nix"
+    ]
+  }
+}

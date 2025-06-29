@@ -1,0 +1,7 @@
+{
+  "containers": {
+    "nixos": [
+      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/base/containers/podman.nix"
+    ]
+  }
+}

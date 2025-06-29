@@ -1,0 +1,10 @@
+{
+  "host_cuda": {
+    "homeManager": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/cuda/home.nix"
+    ],
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/hosts/cuda/default.nix"
+    ]
+  }
+}

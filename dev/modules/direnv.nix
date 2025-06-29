@@ -2,7 +2,6 @@ let
   path_ = ".envrc";
   text = ''
     use flake path:dev
-    just --list
   '';
 
   file = pkgs: {

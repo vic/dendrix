@@ -1,0 +1,11 @@
+{
+  "hosts/x260": {
+    "nixos": [
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/services.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/x260/boot.nix"
+    ]
+  }
+}

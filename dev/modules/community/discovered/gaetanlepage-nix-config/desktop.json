@@ -1,0 +1,13 @@
+{
+  "desktop": {
+    "homeManager": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/home/desktop/imports.nix"
+    ],
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/nixos/desktop/wayland.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/nixos/desktop/packages.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/nixos/desktop/misc.nix",
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/nixos/desktop/imports.nix"
+    ]
+  }
+}

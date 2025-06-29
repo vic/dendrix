@@ -1,0 +1,36 @@
+{
+  "base": {
+    "homeManager": [
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/flake-parts/unfree-packages.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/yubikey.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/xdg.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/system/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/podman.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/passwords-mgmt/password-store.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/home.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/editors/micro.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/command-not-found.nix"
+    ],
+    "nixos": [
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/flake-parts/unfree-packages.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/yubikey.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/time/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/system/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/system/auto-upgrade/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/services.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/security/sudo-rs.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/security/rtkit.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/power-mgmt/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/nix.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/network/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/i18n.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/documentation.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/console/console.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/command-not-found.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/boot/kernel.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/boot/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/admin/nh.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/base/accessibility/default.nix"
+    ]
+  }
+}

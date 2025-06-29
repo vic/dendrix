@@ -11,14 +11,6 @@
 # There's also an import-tree method for people who
 # choose to only share files having a `community` path.
 #
-# Aspects filter auto-generation:
-#
-# This function takes the nix value of a file ./discovered/aspects-<repo>-<tree>.json
-# and for each aspect name, it creates an API method on the import-tree that restricts
-# to the files defined for that aspect.
-# This way, users can say (root-tree.virtualization) to select all files that define
-# that aspect.
-#
 # Flags are a simple way of marking files by the
 # capabilities they use, and still independent
 # of their location in an import-tree.
@@ -34,7 +26,7 @@
 # from files on each community import-tree.
 # and documented on Dendrix README automatically.
 #
-lib: _aspects: # the nix content of a file ./discovered/aspects-<repo>-<tree>.json
+lib:
 let
   pipe-line = [
     skip-private # by default ignore private paths.
@@ -47,8 +39,11 @@ let
       community
       flagged
       availableFlags
+      rootPath
       ;
   };
+
+  rootPath = self: path: lib.pipe (self.new.addPath path) pipe-line;
 
   # anything having private on its path is ignored.
   skip-private = self: self.filterNot (lib.hasInfix "private");

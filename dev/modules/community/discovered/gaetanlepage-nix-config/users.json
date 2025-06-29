@@ -1,0 +1,7 @@
+{
+  "users": {
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/nixos/core/users.nix"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "hosts/nixos": {
+    "nixos": [
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/networking.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/fileSystems.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/facter.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/default.nix",
+      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/hosts/nixos/boot.nix"
+    ]
+  }
+}

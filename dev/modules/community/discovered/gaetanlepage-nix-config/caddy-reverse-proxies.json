@@ -1,0 +1,7 @@
+{
+  "caddy-reverse-proxies": {
+    "nixos": [
+      "/nix/store/qnizxnsq3jhgahmnd0rpqbjx124a82w0-source/modules/nixos/server/caddy-reverse-proxies.nix"
+    ]
+  }
+}
