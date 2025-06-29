@@ -39,7 +39,7 @@ As an example of what a dendritic nix config looks like, suppose we want to conf
 ```
 
 That's it. This is what Dendritic is all about. By following this configuration pattern you
-will notice the following advantages for your configurations.
+will notice your code now incorporates the following:
 
 ## Denritic Advantages
 
@@ -89,8 +89,10 @@ This is possible because:
 In a Dendritic setup, each `.nix` file has only one interpretation: A flake-parts module.
 
 Unlike other kinds of setup where each nix file can be a `nixos` configuration, or a `home-manager` configuration, or
-a package, or something entrely different, where loading a file needs you need to be sure of what kind of meaning
-it has.
+a package, or something entrely different. In such setups, loading a file requires you to know what kind of meaning
+each file has before importing it.
+
+This leads us to having:
 
 ### No manual file imports.
 
@@ -145,19 +147,22 @@ instead of where they are applied.
 
 ### Feature _Closures_
 
-By closure we mean that if you need to look where some `feature` is provided, you only have
-to look at a single place: The file or directory likely named after that feature.
+By closure we mean: everything that is needed for a given _feature_ to work is
+configured closely, in the same unit (file/directory named after the feature).
 
 Because a single `feature.nix` contributes to different configuration classes, it has all
 the information on how feature works, instead of having to look at different files for
 package definitions, nixos or home-manager configurations dispersed over all over the tree.
 
+If you need to look where some feature is defined on a repo you don't know,
+it will be easier to simply guess by path name. _Paths become documentation_.
+
 ### _Incremental_ Features
 
 Since all nix files are loaded automatically. You can increment the capabilities that an
-existing `feature-x.nix` file has by just creating another `feature-x/advanced.nix` file.
+existing `feature-x/basic.nix` provides by just creating another `feature-x/advanced.nix`.
 Both of them should contribute to the same aspect: `flake.modules.<class>.feature-x`, but
-each file focuses on the different capabilities they provide.
+each file focuses on the different capabilities they provide to the system whole.
 
 This way, you can split `feature-x/advanced.nix` into more files. And adding or removing
 files from your modules (or adding an `_` for them to be ignored) has no
@@ -176,7 +181,7 @@ as long as it exposes `flake.modules.<class>.<aspect>` attribute sets.
 ### Dendritic community.
 
 Last but not least. By using the dendritic pattern you open the door to defining or re-using
-existing non-hardware/non-user generic configurations from the community.
+existing generic (user/host independent) configurations from the community.
 
 This is the goal of the Dendrix project: To allow people share dendritic configurations and
 socially enhance their capabilities.

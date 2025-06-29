@@ -5,7 +5,7 @@ Our last section ended with the following mission statement:
 > This is the goal of the Dendrix project: To allow people share dendritic configurations and
 > socially enhance their capabilities.
 
-As a first step into this goal, Dendrix [discovers](https://github.com/vic/dendrix/blob/main/dev/modules/community/discovered.nix) what `aspect`s and which nix configuration `class`es are provided by the dendritic [community repository sources](https://github.com/vic/dennix/blob/main/dev/npins/sources.json).
+As a first step into this goal, Dendrix [discovers](https://github.com/vic/dendrix/blob/main/dev/lib/discover.nix) what `aspect`s and which nix configuration `class`es are provided by the dendritic [community repository sources](https://github.com/vic/dennix/blob/main/dev/npins/sources.json).
 
 The sidebar on the left shows a filtering UI that serves three purposes:
 
