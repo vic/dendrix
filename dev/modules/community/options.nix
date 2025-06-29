@@ -1,6 +1,7 @@
 {
   inputs,
   lib,
+  config,
   ...
 }:
 let
@@ -9,6 +10,7 @@ let
   sources = import ./../../npins;
   discoverAspects = import ./../../lib/discover.nix { inherit lib inputs; };
   default-pipeline = import ./_pipeline.nix lib;
+  dendrix = config.dendrix;
 
   communityOption = mkOption {
     description = "Dendritic Community module trees.";
@@ -43,10 +45,12 @@ let
               }
             ))
           ];
+
+          trees = if dendrix.discover-community-aspects then discovered-trees else { };
         in
         {
           config = {
-            trees = discovered-trees;
+            inherit trees;
           };
           options = {
             readme = mkOption {
@@ -114,6 +118,7 @@ let
   };
 in
 {
+  options.dendrix.discover-community-aspects = lib.mkEnableOption "should we discover aspects from flakes.";
   options.dendrix.community = communityOption;
   config.dendrix.community = builtins.mapAttrs (_: _: { }) sources;
 }
