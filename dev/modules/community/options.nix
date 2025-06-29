@@ -10,14 +10,8 @@ let
   sources = import ./../../npins;
   discoverAspects = import ./../../lib/discover.nix { inherit lib inputs; };
   default-pipeline = import ./_pipeline.nix lib;
+  create-import-tree = paths: lib.pipe (inputs.import-tree.addPath paths) default-pipeline;
   dendrix = config.dendrix;
-
-  subTree =
-    paths:
-    lib.pipe inputs.import-tree [
-      (i: i.addPath paths)
-      (i: lib.pipe i default-pipeline)
-    ];
 
   cached-trees = lib.pipe ./discovered/trees.json [
     builtins.readFile
@@ -32,10 +26,11 @@ let
               builtins.readFile
               builtins.fromJSON
             ];
+            all-files = lib.mapAttrsToList (_: lib.attrValues) cached-aspects;
           in
           {
             ${tree-name} = {
-              import-tree = inputs.import-tree;
+              import-tree = create-import-tree all-files;
               aspects = cached-aspects;
             };
           }
@@ -61,11 +56,11 @@ let
 
           trees = if dendrix.discover-community-aspects then discovered-trees else cached-trees.${repo-name};
 
-          discovered-aspects = discoverAspects repo-cfg.source (subTree repo-cfg.community-paths);
+          discovered-aspects = discoverAspects repo-cfg.source (create-import-tree repo-cfg.community-paths);
           discovered-trees = lib.pipe discovered-aspects [
             (lib.mapAttrs (
               aspect: classes: {
-                import-tree = inputs.import-tree;
+                import-tree = create-import-tree (lib.attrValues classes);
                 aspects = {
                   ${aspect} = classes;
                 };
