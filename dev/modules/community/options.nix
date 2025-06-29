@@ -26,12 +26,11 @@ let
 
           community-dir =
             if builtins.pathExists "${repo-cfg.source}/modules/community" then
-              "modules/community"
+              "${repo-cfg.source}/modules/community"
             else
-              "modules";
+              "${repo-cfg.source}/modules";
 
-          default-path = "${repo-cfg.source}/${config.community-dir}";
-          default-import-tree = lib.pipe (inputs.import-tree.addPath default-path) default-pipeline;
+          default-import-tree = lib.pipe (inputs.import-tree.addPath config.community-paths) default-pipeline;
 
           discovered-aspects = discoverAspects repo-cfg.source default-import-tree;
           discovered-trees = lib.pipe discovered-aspects [
@@ -103,10 +102,10 @@ let
               readOnly = true;
               internal = true;
             };
-            community-dir = mkOption {
-              type = types.str;
-              description = "repo community subdir";
-              default = community-dir;
+            community-paths = mkOption {
+              type = types.unspecified;
+              description = "any inport-tree argument representing shared tree";
+              default = [ community-dir ];
             };
           };
         }

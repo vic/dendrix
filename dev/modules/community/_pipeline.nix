@@ -39,11 +39,8 @@ let
       community
       flagged
       availableFlags
-      rootPath
       ;
   };
-
-  rootPath = self: path: lib.pipe (self.new.addPath path) pipe-line;
 
   # anything having private on its path is ignored.
   skip-private = self: self.filterNot (lib.hasInfix "private");

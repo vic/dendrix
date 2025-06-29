@@ -1,4 +1,0 @@
-
-## Why Dendritic
-
-Because aspects

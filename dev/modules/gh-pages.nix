@@ -60,6 +60,9 @@ in
           };
         }
       ];
-      treefmt.settings.global.excludes = [ path_ ];
+      treefmt.settings.global.excludes = [
+        path_
+        "dev/book/**"
+      ];
     };
 }
