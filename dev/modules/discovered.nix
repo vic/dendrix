@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  dendrix.discover-community-aspects = true;
+  dendrix.discover-community-aspects = lib.mkDefault true;
 
   perSystem =
     { pkgs, ... }:

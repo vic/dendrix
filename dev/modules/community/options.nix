@@ -12,6 +12,39 @@ let
   default-pipeline = import ./_pipeline.nix lib;
   dendrix = config.dendrix;
 
+  subTree =
+    paths:
+    lib.pipe inputs.import-tree [
+      (i: i.addPath paths)
+      (i: lib.pipe i default-pipeline)
+    ];
+
+  cached-trees = lib.pipe ./discovered/trees.json [
+    builtins.readFile
+    builtins.fromJSON
+    (lib.mapAttrs (
+      repo-name: tree-names:
+      lib.pipe tree-names [
+        (lib.map (
+          tree-name:
+          let
+            cached-aspects = lib.pipe ./discovered/${repo-name}/${tree-name}.json [
+              builtins.readFile
+              builtins.fromJSON
+            ];
+          in
+          {
+            ${tree-name} = {
+              import-tree = inputs.import-tree;
+              aspects = cached-aspects;
+            };
+          }
+        ))
+        lib.mergeAttrsList
+      ]
+    ))
+  ];
+
   communityOption = mkOption {
     description = "Dendritic Community module trees.";
     default = { };
@@ -26,19 +59,13 @@ let
           repo-name = name;
           repo-cfg = config;
 
-          community-dir =
-            if builtins.pathExists "${repo-cfg.source}/modules/community" then
-              "${repo-cfg.source}/modules/community"
-            else
-              "${repo-cfg.source}/modules";
+          trees = if dendrix.discover-community-aspects then discovered-trees else cached-trees.${repo-name};
 
-          default-import-tree = lib.pipe (inputs.import-tree.addPath config.community-paths) default-pipeline;
-
-          discovered-aspects = discoverAspects repo-cfg.source default-import-tree;
+          discovered-aspects = discoverAspects repo-cfg.source (subTree repo-cfg.community-paths);
           discovered-trees = lib.pipe discovered-aspects [
             (lib.mapAttrs (
               aspect: classes: {
-                import-tree = default-import-tree;
+                import-tree = inputs.import-tree;
                 aspects = {
                   ${aspect} = classes;
                 };
@@ -46,7 +73,11 @@ let
             ))
           ];
 
-          trees = if dendrix.discover-community-aspects then discovered-trees else { };
+          community-dir =
+            if builtins.pathExists "${repo-cfg.source}/modules/community" then
+              "${repo-cfg.source}/modules/community"
+            else
+              "${repo-cfg.source}/modules";
         in
         {
           config = {
@@ -85,8 +116,14 @@ let
                       aspects = mkOption {
                         description = "aspects provided on this tree";
                         default = { };
+                        internal = true;
                         type = types.attrsOf (types.attrsOf (types.listOf types.str));
-                        apply = attrs: if attrs == { } then discoverAspects config.source config.import-tree else attrs;
+                        apply =
+                          attrs:
+                          if attrs == { } && dendrix.discover-community-aspects then
+                            discoverAspects config.source config.import-tree
+                          else
+                            attrs;
                       };
                       import-tree = mkOption {
                         description = "${name} import-tree";
