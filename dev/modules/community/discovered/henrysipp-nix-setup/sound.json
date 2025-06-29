@@ -1,0 +1,7 @@
+{
+  "sound": {
+    "nixos": [
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/sound/sound.nix"
+    ]
+  }
+}

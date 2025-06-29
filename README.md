@@ -19,10 +19,10 @@ Also if you want to provide custom trees, send a pull-request editing `dev/modul
 <summary>
 
 Dendrix knows of <b>8</b> [dendritic repositories](https://github.com/vic/dendrix/blob/main/dev/npins/sources.json).
-201 [import-trees](https://github.com/vic/dendrix/tree/main/dev/modules/community).
+203 [import-trees](https://github.com/vic/dendrix/tree/main/dev/modules/community).
 9 flags.
-161 aspects accross 9 different nix configuration classes.
-613 nix configuration files.
+162 aspects accross 9 different nix configuration classes.
+612 nix configuration files.
 
 </summary>
 
@@ -383,19 +383,19 @@ Maka-77x-nixconf7's work tree
 
 </details>
 
-### [dliberalesso-nix-config](https://github.com/dliberalesso/nix-config/tree/499b5a0ace8323a21e2fa28f94daafd03a7958c7
+### [dliberalesso-nix-config](https://github.com/dliberalesso/nix-config/tree/c2906862413dccd1745ce26e0172cac4381c34bd
 
 <details>
 <summary>
 
-dliberalesso-nix-config at rev 499b5a0.
+dliberalesso-nix-config at rev c290686.
 8 dendritic trees.
 <b>8</b> aspects across 2 nix classes.
 85 nix configuration files.
 
 </summary>
 
-[README](https://github.com/dliberalesso/nix-config/tree/499b5a0ace8323a21e2fa28f94daafd03a7958c7/README.md)
+[README](https://github.com/dliberalesso/nix-config/tree/c2906862413dccd1745ce26e0172cac4381c34bd/README.md)
 
 <details>
 <summary>
@@ -917,19 +917,19 @@ drupol-infra's work tree
 
 </details>
 
-### [gaetanlepage-nix-config](https://github.com/gaetanlepage/nix-config/tree/a17aca5073f9bc51e3660a5015b03d6513a87573
+### [gaetanlepage-nix-config](https://github.com/gaetanlepage/nix-config/tree/1d2b2faa7dc402b64e4fad02dd8ce85bce5c15cd
 
 <details>
 <summary>
 
-gaetanlepage-nix-config at rev a17aca5.
+gaetanlepage-nix-config at rev 1d2b2fa.
 55 dendritic trees.
 <b>55</b> aspects across 2 nix classes.
 131 nix configuration files.
 
 </summary>
 
-[README](https://github.com/gaetanlepage/nix-config/tree/a17aca5073f9bc51e3660a5015b03d6513a87573/README.md)
+[README](https://github.com/gaetanlepage/nix-config/tree/1d2b2faa7dc402b64e4fad02dd8ce85bce5c15cd/README.md)
 
 <details>
 <summary>
@@ -1769,24 +1769,24 @@ gaetanlepage-nix-config's zathura tree
 
 </details>
 
-### [henrysipp-nix-setup](https://github.com/henrysipp/nix-setup/tree/0a9d314d352f934ee3c457a865f29377c51020a8
+### [henrysipp-nix-setup](https://github.com/henrysipp/nix-setup/tree/5fbfdf52685dd13ecf96e418a9a83af95787e787
 
 <details>
 <summary>
 
-henrysipp-nix-setup at rev 0a9d314.
-19 dendritic trees.
-<b>19</b> aspects across 6 nix classes.
-49 nix configuration files.
+henrysipp-nix-setup at rev 5fbfdf5.
+21 dendritic trees.
+<b>21</b> aspects across 6 nix classes.
+48 nix configuration files.
 
 </summary>
 
-[README](https://github.com/henrysipp/nix-setup/tree/0a9d314d352f934ee3c457a865f29377c51020a8/README.md)
+[README](https://github.com/henrysipp/nix-setup/tree/5fbfdf52685dd13ecf96e418a9a83af95787e787/README.md)
 
 <details>
 <summary>
 
-##### henrysipp-nix-setup defines <b>19</b> aspects across 6 nix classes.
+##### henrysipp-nix-setup defines <b>21</b> aspects across 6 nix classes.
 
 </summary>
 
@@ -1804,25 +1804,29 @@ henrysipp-nix-setup at rev 0a9d314.
 
 - <code>dev</code>: <code>homeManager</code>/<code>nixos</code>
 
+- <code>fonts</code>: <code>homeManager</code>/<code>nixos</code>
+
 - <code>games</code>: <code>homeManager</code>/<code>nixos</code>
 
 - <code>gawain</code>: <code>hosts</code>
 
-- <code>gnome</code>: <code>nixos</code>
+- <code>gnome</code>: <code>homeManager</code>/<code>nixos</code>
 
 - <code>guren</code>: <code>hosts</code>
 
 - <code>henry</code>: <code>nixosUsers</code>
 
-- <code>hyprland</code>: <code>homeManager</code>/<code>nixos</code>
-
 - <code>nixvim</code>: <code>homeManager</code>
+
+- <code>packages</code>: <code>nixos</code>
 
 - <code>plasma</code>: <code>homeManager</code>/<code>nixos</code>
 
 - <code>root</code>: <code>nixosUsers</code>
 
 - <code>shell</code>: <code>darwin</code>/<code>homeManager</code>/<code>nixos</code>
+
+- <code>sound</code>: <code>nixos</code>
 
 - <code>system</code>: <code>darwin</code>
 
@@ -1923,6 +1927,19 @@ henrysipp-nix-setup's dev tree
 }
 ```
 
+- fonts:
+
+henrysipp-nix-setup's fonts tree
+
+```nix
+# usage on your layers.nix
+{inputs, ...}: {
+  imports = [
+    inputs.dendrix.community.henrysipp-nix-setup.fonts
+  ];
+}
+```
+
 - games:
 
 henrysipp-nix-setup's games tree
@@ -1988,19 +2005,6 @@ henrysipp-nix-setup's henry tree
 }
 ```
 
-- hyprland:
-
-henrysipp-nix-setup's hyprland tree
-
-```nix
-# usage on your layers.nix
-{inputs, ...}: {
-  imports = [
-    inputs.dendrix.community.henrysipp-nix-setup.hyprland
-  ];
-}
-```
-
 - nixvim:
 
 henrysipp-nix-setup's nixvim tree
@@ -2010,6 +2014,19 @@ henrysipp-nix-setup's nixvim tree
 {inputs, ...}: {
   imports = [
     inputs.dendrix.community.henrysipp-nix-setup.nixvim
+  ];
+}
+```
+
+- packages:
+
+henrysipp-nix-setup's packages tree
+
+```nix
+# usage on your layers.nix
+{inputs, ...}: {
+  imports = [
+    inputs.dendrix.community.henrysipp-nix-setup.packages
   ];
 }
 ```
@@ -2049,6 +2066,19 @@ henrysipp-nix-setup's shell tree
 {inputs, ...}: {
   imports = [
     inputs.dendrix.community.henrysipp-nix-setup.shell
+  ];
+}
+```
+
+- sound:
+
+henrysipp-nix-setup's sound tree
+
+```nix
+# usage on your layers.nix
+{inputs, ...}: {
+  imports = [
+    inputs.dendrix.community.henrysipp-nix-setup.sound
   ];
 }
 ```

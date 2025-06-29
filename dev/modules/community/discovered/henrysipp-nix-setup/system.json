@@ -1,7 +1,7 @@
 {
   "system": {
     "darwin": [
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/darwin/darwin-system.nix"
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/darwin/darwin-system.nix"
     ]
   }
 }

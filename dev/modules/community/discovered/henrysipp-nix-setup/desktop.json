@@ -1,17 +1,16 @@
 {
   "desktop": {
     "darwin": [
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/darwin/darwin-desktop.nix"
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/darwin/darwin-desktop.nix"
     ],
     "homeManager": [
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/desktop/fonts/fonts.nix",
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/desktop/environment/default.nix"
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/desktop/wallpapers.nix",
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/desktop/environment/default.nix"
     ],
     "nixos": [
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/desktop/packages.nix",
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/desktop/fonts/fonts.nix",
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/desktop/environment/default.nix",
-      "/nix/store/rwf5zf3f995ack8isg5id7cr9vz2xxi1-source/modules/desktop/browsers/firefox.nix"
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/desktop/environment/default.nix",
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/desktop/browsers/firefox.nix",
+      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/desktop/browsers/chrome.nix"
     ]
   }
 }
