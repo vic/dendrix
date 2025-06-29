@@ -5,7 +5,10 @@
   perSystem =
     { pkgs, ... }:
     let
-      imports = [ elmFlag ] ++ generatedTrees;
+      imports = [
+        elmFlag
+        treesJson
+      ] ++ generatedTrees;
 
       generatedTrees = lib.pipe config.dendrix.community [
         (lib.mapAttrsToList (repo-name: repo: lib.mapAttrsToList (treeMod repo-name) repo.trees))
@@ -23,6 +26,22 @@
             {
               inherit path_;
               drv = pkgs.writers.writeJSON name tree.aspects;
+            }
+          ];
+        };
+
+      treesJson =
+        let
+          path_ = "dev/modules/community/discovered/trees.json";
+          json = lib.pipe config.dendrix.community [
+            (lib.mapAttrs (_: (repo: lib.attrNames repo.trees)))
+          ];
+        in
+        {
+          files.files = [
+            {
+              inherit path_;
+              drv = pkgs.writers.writeJSON "trees.json" json;
             }
           ];
         };
