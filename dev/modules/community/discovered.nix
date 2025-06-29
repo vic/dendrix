@@ -6,7 +6,7 @@
     let
       imports = [ elmFlag ] ++ generatedTrees;
 
-      generatedTrees = lib.pipe config.flake.community [
+      generatedTrees = lib.pipe config.dendrix.community [
         (lib.mapAttrsToList (repo-name: repo: lib.mapAttrsToList (treeMod repo-name) repo.trees))
         (lib.flatten)
       ];
@@ -41,7 +41,7 @@
         ];
       };
 
-      elmFlag = lib.pipe config.flake.community [
+      elmFlag = lib.pipe config.dendrix.community [
         (lib.mapAttrsToList (
           repo-name: repo: {
             name = repo-name;

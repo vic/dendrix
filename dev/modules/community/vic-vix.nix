@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
 
-  flake.community.vic-vix =
+  dendrix.community.vic-vix =
     { config, ... }:
     {
       # custom directory where to share modules from.

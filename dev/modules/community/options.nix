@@ -114,6 +114,6 @@ let
   };
 in
 {
-  options.flake.community = communityOption;
-  config.flake.community = builtins.mapAttrs (_: _: { }) sources;
+  options.dendrix.community = communityOption;
+  config.dendrix.community = builtins.mapAttrs (_: _: { }) sources;
 }
