@@ -5,6 +5,8 @@ src = "src"
 title = "Dendrix - Community driven Dendritic Nix configurations."
 
 [output.html]
+git-repository-url = "https://github.com/vic/dendrix"
+edit-url-template = "https://github.com/vic/dendrix/edit/main/dev/book/{path}"
 additional-js = ["./theme/dendrix_repos.js", "./theme/elm.js", "./theme/elm-init.js"]
 additional-css = ["./theme/catppuccin.css"]
 default-theme = "latte"
