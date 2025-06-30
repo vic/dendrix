@@ -16,7 +16,6 @@ in
               push.paths = [
                 "dev/book/**"
                 "dev/elm/**"
-                "aspects/**"
                 "dev/npins/**"
               ];
               workflow_call = { };
@@ -62,7 +61,11 @@ in
       ];
       treefmt.settings.global.excludes = [
         path_
-        "dev/book/**"
+        "dev/book/book/**"
+        "dev/book/.gitignore"
+        "dev/book/book.toml"
+        "dev/book/theme/index.hbs"
+        "dev/book/theme/catppuccin.css"
       ];
     };
 }

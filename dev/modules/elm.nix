@@ -36,6 +36,7 @@ in
     {
       treefmt.programs.elm-format.enable = true;
       treefmt.settings.global.excludes = [
+        path_
         "dev/elm/elm-stuff/*"
         "dev/elm/registry.dat"
       ];

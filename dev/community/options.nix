@@ -91,11 +91,6 @@ let
             inherit trees;
           };
           options = {
-            readme = mkOption {
-              description = "Notes about using ${name} shared modules.";
-              default = "No community notes on ${name}. Use the source, Luke.";
-              type = types.str;
-            };
             trees = mkOption {
               description = "import-tree's of shared modules";
               default = { };
@@ -130,6 +125,7 @@ let
                         description = "${name} import-tree";
                         type = types.unspecified;
                         readOnly = true;
+                        internal = true;
                         default = lib.pipe config.paths ([ createImportTree ] ++ config.pipeline);
                       };
                     };

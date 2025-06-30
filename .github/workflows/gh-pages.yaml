@@ -59,7 +59,6 @@
       "paths": [
         "dev/book/**",
         "dev/elm/**",
-        "aspects/**",
         "dev/npins/**"
       ]
     },

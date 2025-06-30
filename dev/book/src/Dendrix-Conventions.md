@@ -4,7 +4,6 @@ There are some non-mandatory conventions on Dendrix. However using them can ease
 
 Some of these conventions translate as code in the [default pipe-line](https://github.com/vic/dendrix/blob/main/dev/community/_pipeline.nix) used to configure each import-tree.
 
-
 ## Having a `modules/community` directory.
 
 By default, dendrix detects if the community repo has a `modules/community` directory. If so, _only_ that directory is scanned for aspects. So we recommend having such a directory.
@@ -35,11 +34,13 @@ By using flags in your paths, it can be posible for people do
 things like including/excluding some capabilities:
 
 ```nix
-# Include anything with +vim on their path.
-# Exclude anything with +emacs on their path.
-import-tree [
-  dendrix.community.your-repo.flagged "-emacs +vim"
-]
+{
+  imports = [
+    # Include anything with +vim on their path.
+    # Exclude anything with +emacs on their path.
+    (inputs.dendrix.your-repo.flagged "-emacs +vim")
+  ];
+}
 ```
 
 ## A clean `flake.nix` that just `import-tree ./modules`
@@ -47,3 +48,9 @@ import-tree [
 As noted in the [focused flake.nix](Dendritic.html#minimal-and-focused-flakenix), a best practice is to move all your nix logic into a nix file inside `./modules`.
 
 People usually have a `./modules/flake` for this purpose.
+
+## Using standard nix features.
+
+At least on community intended directories. Outside of your shared directories
+you can use whatever nix features you want or any custom input of yours.
+However, keeping the shared code usable for most people is best for code adoption.

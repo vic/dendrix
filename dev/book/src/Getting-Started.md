@@ -1,17 +1,22 @@
 # Getting Started
 
-> Dendrix is an on-going effort. While we aim at providing blessed [Layers](Dendrix-Layers.html) to ease the life of NixOS newcomers, we are not still there.
+## Usage (for existing flake-parts setups)
 
-## Quick Start
+See usage instructions for either [Dendrix Trees](Dendrix-Trees.html#using-community-import-trees) or [Dendrix Layers](Dendrix-Layers.html#using-existing-layers).
+
+## Quick Start (for NixOS newcomers)
+
+> Dendrix is a work in progress. We aim to provide batteries-included preconfigured NixOS experience for newcomers.
+> But we are currently working on it.
 
 We provide some [templates](https://github.com/vic/dendrix/tree/main/templates) you can
-use to start a new flake.
+use to start a new system flake.
 
 ```
 nix flake init github:vic/dendrix#template
 ```
 
-Then edit your [`layers.nix`](https://github.com/vic/dendrix/tree/main/templates/default/layers.nix) file.
+Then edit your [`layers.nix`](https://github.com/vic/dendrix/tree/main/templates/default/modules/layers.nix) file.
 
 ### Try it Online!
 

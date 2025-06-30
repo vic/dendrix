@@ -13,13 +13,36 @@ The sidebar on the left shows a filtering UI that serves three purposes:
 - Visibility on what names are used by the community for defining aspects/classes.
 - Allow people to re-use existing aspects by providing import-trees [to them](https://github.com/vic/dendrix/tree/main/dev/community/discovered).
 
+## Using Community import-trees
+
+For each [community repository](https://github.com/vic/dendrix/tree/main/dev/community/discovered),
+Dendrix exposes a _top-level_ import-tree that provides all files in the repo shared paths.
+And for each discovered aspect in the repo, Dendrix defines another import-tree inside repo attribute.
+
+```nix
+# your ./modules/something.nix
+{inputs, ...}:
+{
+  imports = [
+    inputs.dendrix.some-repo # ALL shared files in a repository. intended to be used WITH `.filter`.
+    inputs.dendrix.some-repo.some-aspect # Files that define flake.modules.<class>.some-aspect
+  ];
+}
+```
+
+An example of a repo's import-tree is [`dendrix.vic-vix`](https://github.com/vic/dendrix/tree/main/dev/community/discovered/vic-vix).
+It references all files shared by [vic's `modules/community`](https://github.com/vic/vix/tree/main/modules/community) directory,
+except for those having the `private` infix (see [conventions](Dendrix-Conventions.html)).
+
+An example of an repo's aspect import-tree is [`dendrix.vic-vix.macos-keys`](https://github.com/vic/dendrix/blob/main/dev/community/discovered/vic-vix/macos-keys.json) that provides MacOS like keys on Linux using `keyd`.
+
 ## Community Participation.
 
 ### Sharing re-usable parts of your Dendritic configs.
 
 You are free to send a PR adding/removing your dendritic repo into `dev/npins/sources.json`.
 
-And even if you have an uncommon directory layout, you can share [specific community `paths`](https://github.com/vic/dendrix/blob/main/dev/community/vic-vix.nix).
+If you have an uncommon directory layout, or you want to share custom import-trees, you can specify [specific community `paths`](https://github.com/vic/dendrix/blob/main/dev/community/vic-vix.nix). (see all [options](https://github.com/vic/dendrix/blob/main/dev/community/options.nix))
 
 As an example in the previous link, vic has a `modules/community` subdir, indicating that
 everything outside of it might not be ready for re-use by other people. perhaps because it depends on some hardware or

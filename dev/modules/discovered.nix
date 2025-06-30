@@ -1,8 +1,17 @@
 { config, lib, ... }:
 {
+  dendrix.discover-community-aspects = lib.mkDefault (builtins.getEnv "DISCOVER_ASPECTS" != "");
+
   perSystem =
     { pkgs, ... }:
     let
+      discoveredPath = "dev/community/discovered";
+      discoverCmd = {
+        name = "discover";
+        help = "generate files with discovery-community-aspects enabled.";
+        command = "env DISCOVER_ASPECTS=true genfiles --impure \"$@\"";
+      };
+
       imports = [
         elmFlag
         treesJson
@@ -12,8 +21,6 @@
         (lib.mapAttrsToList (repo-name: repo: lib.mapAttrsToList (treeMod repo-name) repo.trees))
         (lib.flatten)
       ];
-
-      discoveredPath = "dev/community/discovered";
 
       treeMod =
         repo-name: tree-name: tree:
@@ -100,6 +107,7 @@
     in
     {
       inherit imports;
+      devshells.default.commands = [ discoverCmd ];
     };
 
 }

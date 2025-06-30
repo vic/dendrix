@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.dendrix.layers.vix
+    inputs.dendrix.vix
   ];
 }

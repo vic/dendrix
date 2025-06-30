@@ -15,7 +15,6 @@
         settings.on-unmatched = "fatal";
         settings.global.excludes = [
           "LICENSE"
-          "justfile"
         ];
       };
 
