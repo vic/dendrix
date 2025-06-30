@@ -1,10 +1,7 @@
 {
   "nodes": {
     "dendrix": {
-      "inputs": {
-        "import-tree": "import-tree",
-        "nixpkgs-lib": "nixpkgs-lib"
-      },
+      "flake": false,
       "locked": {
         "path": "..",
         "type": "path"
@@ -67,7 +64,7 @@
     },
     "flake-parts": {
       "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib_2"
+        "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
         "lastModified": 1749398372,
@@ -84,21 +81,6 @@
       }
     },
     "import-tree": {
-      "locked": {
-        "lastModified": 1751270547,
-        "narHash": "sha256-crsdw+SVF+8JewH2npzM5iy2RowD3min24DqzCZX7uQ=",
-        "owner": "vic",
-        "repo": "import-tree",
-        "rev": "e5a363c65db721944ec29d42c210f33f7dee9808",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vic",
-        "repo": "import-tree",
-        "type": "github"
-      }
-    },
-    "import-tree_2": {
       "locked": {
         "lastModified": 1751270547,
         "narHash": "sha256-crsdw+SVF+8JewH2npzM5iy2RowD3min24DqzCZX7uQ=",
@@ -131,21 +113,6 @@
     },
     "nixpkgs-lib": {
       "locked": {
-        "lastModified": 1751159883,
-        "narHash": "sha256-urW/Ylk9FIfvXfliA1ywh75yszAbiTEVgpPeinFyVZo=",
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "rev": "14a40a1d7fb9afa4739275ac642ed7301a9ba1ab",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "type": "github"
-      }
-    },
-    "nixpkgs-lib_2": {
-      "locked": {
         "lastModified": 1748740939,
         "narHash": "sha256-rQaysilft1aVMwF14xIdGS3sj1yHlI6oKQNBRTF40cc=",
         "owner": "nix-community",
@@ -166,7 +133,7 @@
         "files": "files",
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts",
-        "import-tree": "import-tree_2",
+        "import-tree": "import-tree",
         "nixpkgs": "nixpkgs",
         "systems": "systems",
         "treefmt-nix": "treefmt-nix"

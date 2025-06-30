@@ -1,14 +1,5 @@
 {
-  outputs =
-    inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } (
-      inputs.import-tree [
-        ./modules
-        ./community
-        ./layers
-      ]
-    );
-
+  outputs = inputs: import ./. inputs;
   inputs = {
     dendrix.flake = false;
     dendrix.url = "path:..";

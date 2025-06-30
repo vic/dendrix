@@ -2,17 +2,20 @@ inputs:
 let
   inherit (inputs.nixpkgs-lib) lib;
 
-  dendrix = community // {
-    inherit layers sources;
-  };
+  dendrix =
+    community
+    // layers
+    // {
+      inherit sources;
+    };
 
   sources = import ./dev/npins;
   community = lib.mapAttrs (_: r: r.import-tree) ev.config.dendrix.community;
   layers = ev.config.dendrix.layers;
 
   module = inputs.import-tree [
-    ./dev/modules/community
-    ./dev/modules/layers
+    ./dev/community
+    ((inputs.import-tree.addPath ./dev/layers).match ".+/dev/layers/[^/]+.nix")
   ];
 
   ev = lib.modules.evalModules {
