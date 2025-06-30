@@ -1,7 +1,5 @@
 { config, lib, ... }:
 {
-  dendrix.discover-community-aspects = lib.mkDefault true;
-
   perSystem =
     { pkgs, ... }:
     let
@@ -15,11 +13,13 @@
         (lib.flatten)
       ];
 
+      discoveredPath = "dev/community/discovered";
+
       treeMod =
         repo-name: tree-name: tree:
         let
           name = "${repo-name}/${tree-name}.json";
-          path_ = "dev/modules/community/discovered/${name}";
+          path_ = "${discoveredPath}/${name}";
         in
         {
           files.files = [
@@ -32,7 +32,7 @@
 
       treesJson =
         let
-          path_ = "dev/modules/community/discovered/trees.json";
+          path_ = "${discoveredPath}/trees.json";
           json = lib.pipe config.dendrix.community [
             (lib.mapAttrs (_: (repo: lib.attrNames repo.trees)))
           ];

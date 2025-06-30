@@ -2,7 +2,7 @@
 
 There are some non-mandatory conventions on Dendrix. However using them can ease integration of your repo.
 
-Some of these conventions translate as code in the [default pipe-line](https://github.com/vic/dendrix/blob/main/dev/modules/community/_pipeline.nix) used to configure each import-tree.
+Some of these conventions translate as code in the [default pipe-line](https://github.com/vic/dendrix/blob/main/dev/community/_pipeline.nix) used to configure each import-tree.
 
 
 ## Having a `modules/community` directory.
@@ -11,7 +11,7 @@ By default, dendrix detects if the community repo has a `modules/community` dire
 
 Otherwise the `modules/` directory will be scanned and shared.
 
-If you, however, prefer to have another structure, it is possible to define a `community-paths` [option](https://github.com/vic/dendrix/blob/main/dev/modules/community/options.nix).
+If you, however, prefer to have another structure, it is possible to define a `paths` [option](https://github.com/vic/dendrix/blob/main/dev/community/options.nix).
 
 ## Anything `private` is not shared.
 

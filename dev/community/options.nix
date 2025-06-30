@@ -7,11 +7,22 @@
 let
   inherit (lib) mkOption types;
 
-  sources = import ./../../npins;
-  discoverAspects = import ./../../lib/discover.nix { inherit lib inputs; };
-  default-pipeline = import ./_pipeline.nix lib;
-  create-import-tree = paths: lib.pipe (inputs.import-tree.addPath paths) default-pipeline;
   dendrix = config.dendrix;
+
+  sources = import ./../npins;
+
+  discoverAspects = import ./../lib/discover.nix { inherit lib inputs; };
+  defaultPipeline = import ./_pipeline.nix lib;
+  createImportTree = paths: lib.pipe (inputs.import-tree.addPath paths) defaultPipeline;
+
+  addTreesAPI =
+    trees: self:
+    self.addAPI (
+      lib.mapAttrs (
+        _: t: _self:
+        t.import-tree
+      ) trees
+    );
 
   cached-trees = lib.pipe ./discovered/trees.json [
     builtins.readFile
@@ -30,7 +41,7 @@ let
           in
           {
             ${tree-name} = {
-              import-tree = create-import-tree all-files;
+              paths = all-files;
               aspects = cached-aspects;
             };
           }
@@ -56,11 +67,12 @@ let
 
           trees = if dendrix.discover-community-aspects then discovered-trees else cached-trees.${repo-name};
 
-          discovered-aspects = discoverAspects repo-cfg.source (create-import-tree repo-cfg.community-paths);
-          discovered-trees = lib.pipe discovered-aspects [
+          discovered-trees = lib.pipe repo-cfg.paths [
+            createImportTree
+            (discoverAspects repo-cfg.source)
             (lib.mapAttrs (
               aspect: classes: {
-                import-tree = create-import-tree (lib.attrValues classes);
+                paths = lib.attrValues classes;
                 aspects = {
                   ${aspect} = classes;
                 };
@@ -92,21 +104,10 @@ let
                   { name, config, ... }:
                   {
                     options = {
-                      readme = mkOption {
-                        description = "Notes about ${name} subtree";
-                        default = "${repo-name}'s ${name} tree";
-                        type = types.str;
-                      };
                       pipeline = mkOption {
                         description = "An pipeline to configure ${name} import-tree";
                         type = types.listOf (types.functionTo types.unspecified);
                         default = [ ];
-                      };
-                      flags = mkOption {
-                        description = "A list of flags used in this tree files.";
-                        default = config.import-tree.availableFlags;
-                        readOnly = true;
-                        type = types.listOf types.str;
                       };
                       aspects = mkOption {
                         description = "aspects provided on this tree";
@@ -120,11 +121,16 @@ let
                           else
                             attrs;
                       };
+                      paths = mkOption {
+                        description = "import-tree arguments";
+                        default = [ ];
+                        type = types.listOf types.unspecified;
+                      };
                       import-tree = mkOption {
                         description = "${name} import-tree";
                         type = types.unspecified;
-                        default = inputs.import-tree; # empty
-                        apply = tree: lib.pipe tree (default-pipeline ++ config.pipeline);
+                        readOnly = true;
+                        default = lib.pipe config.paths ([ createImportTree ] ++ config.pipeline);
                       };
                     };
                   }
@@ -138,10 +144,23 @@ let
               readOnly = true;
               internal = true;
             };
-            community-paths = mkOption {
-              type = types.unspecified;
+            pipeline = mkOption {
+              description = "An pipeline to configure top-level import-tree";
+              type = types.listOf (types.functionTo types.unspecified);
+              default = [ ];
+            };
+            paths = mkOption {
+              type = types.listOf types.unspecified;
               description = "any inport-tree argument representing shared tree";
               default = [ community-dir ];
+            };
+            import-tree = mkOption {
+              description = "top level import-tree";
+              type = types.unspecified;
+              readOnly = true;
+              default = lib.pipe config.paths (
+                [ createImportTree ] ++ config.pipeline ++ [ (addTreesAPI config.trees) ]
+              );
             };
           };
         }
@@ -150,7 +169,10 @@ let
   };
 in
 {
-  options.dendrix.discover-community-aspects = lib.mkEnableOption "should we discover aspects from flakes.";
-  options.dendrix.community = communityOption;
+  options.dendrix = {
+    # for internal use only.
+    discover-community-aspects = lib.mkEnableOption "should we discover aspects from flakes.";
+    community = communityOption;
+  };
   config.dendrix.community = builtins.mapAttrs (_: _: { }) sources;
 }

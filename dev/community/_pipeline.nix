@@ -30,12 +30,12 @@ lib:
 let
   pipe-line = [
     skip-private # by default ignore private paths.
+    (i: i.withLib lib)
     (i: i.addAPI api)
   ];
 
   api = {
     inherit
-      files
       community
       flagged
       availableFlags
@@ -48,13 +48,12 @@ let
   # for those only sharing things with community path.
   community = self: self.filter (lib.hasInfix "community");
 
-  files = self: (self.withLib lib).leafs.result;
-
   # discover +flag from files on a tree
   availableFlags =
     self:
     lib.pipe self [
-      files
+      (i: i.withLib lib)
+      (i: i.leafs.result)
       (builtins.map (builtins.split "\\+([[:alpha:]-]+)"))
       (builtins.map (builtins.filter builtins.isList))
       (lib.flatten)
@@ -83,7 +82,7 @@ let
             self: self.filter (lib.hasInfix flag)
         ))
       ];
-      isNonEmpty = s: builtins.length s > 0;
+      isNonEmpty = s: builtins.stringLength s > 0;
       isNegative = lib.hasPrefix "-";
     in
     lib.pipe self flags-pipe;

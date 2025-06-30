@@ -20,7 +20,7 @@
 
   Sure! the best way to do that is to keep your desktop rice on your own repository.
   And use this repo to add an import-tree object pointing to it. See the notes above
-  about contributing on `dev/npins/sources.json` and `dev/modules/community/*.nix`.
+  about contributing on `dev/npins/sources.json` and `dev/community/*.nix`.
 
 - How are layers made?
 

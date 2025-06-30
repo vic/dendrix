@@ -11,7 +11,7 @@ The sidebar on the left shows a filtering UI that serves three purposes:
 
 - Document which aspects/classes are found on each repo and their locations.
 - Visibility on what names are used by the community for defining aspects/classes.
-- Allow people to re-use existing aspects by providing import-trees [to them](https://github.com/vic/dendrix/tree/main/dev/modules/community/discovered).
+- Allow people to re-use existing aspects by providing import-trees [to them](https://github.com/vic/dendrix/tree/main/dev/community/discovered).
 
 ## Community Participation.
 
@@ -19,7 +19,7 @@ The sidebar on the left shows a filtering UI that serves three purposes:
 
 You are free to send a PR adding/removing your dendritic repo into `dev/npins/sources.json`.
 
-And even if you have an uncommon directory layout, you can share [specific `community-paths`](https://github.com/vic/dendrix/blob/main/dev/modules/community/vic-vix.nix).
+And even if you have an uncommon directory layout, you can share [specific community `paths`](https://github.com/vic/dendrix/blob/main/dev/community/vic-vix.nix).
 
 As an example in the previous link, vic has a `modules/community` subdir, indicating that
 everything outside of it might not be ready for re-use by other people. perhaps because it depends on some hardware or

@@ -1,22 +1,26 @@
 {
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } (
+      inputs.import-tree [
+        ./modules
+        ./community
+        ./layers
+      ]
+    );
 
   inputs = {
+    dendrix.flake = false;
     dendrix.url = "path:..";
+    devshell.inputs.nixpkgs.follows = "nixpkgs";
+    devshell.url = "github:numtide/devshell";
+    files.url = "github:mightyiam/files";
+    flake-compat.url = "github:edolstra/flake-compat";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
-    files.url = "github:mightyiam/files";
-    systems.url = "github:nix-systems/default";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    treefmt-nix.url = "github:numtide/treefmt-nix";
+    systems.url = "github:nix-systems/default";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
-    devshell.url = "github:numtide/devshell";
-    devshell.inputs.nixpkgs.follows = "nixpkgs";
-    flake-compat.url = "github:edolstra/flake-compat";
-  };
-
-  # _additional_ `inputs` only for deduplication
-  inputs = {
-    # dedupe_flake-compat.url = "github:edolstra/flake-compat";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 }

@@ -1,8 +1,5 @@
 {
-  outputs = _: {
-    flakeModule.imports = [
-      ./dev/modules/community-option.nix
-      ./dev/modules/community.nix
-    ];
-  };
+  inputs.import-tree.url = "github:vic/import-tree";
+  inputs.nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
+  outputs = inputs: import ./. inputs;
 }
