@@ -1,7 +1,7 @@
 {
   "bluetooth": {
     "nixos": [
-      "/nix/store/a3wcgf58cbsh47za2y64kfj6y3iwjlqb-source/modules/nixos/desktop/bluetooth.nix"
+      "/nix/store/35kdnji7s93lls6nb7pz5sbqsagdsgwd-source/modules/nixos/desktop/bluetooth.nix"
     ]
   }
 }

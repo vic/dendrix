@@ -1,10 +1,10 @@
 {
   "host_cuda": {
     "homeManager": [
-      "/nix/store/a3wcgf58cbsh47za2y64kfj6y3iwjlqb-source/modules/hosts/cuda/home.nix"
+      "/nix/store/35kdnji7s93lls6nb7pz5sbqsagdsgwd-source/modules/hosts/cuda/home.nix"
     ],
     "nixos": [
-      "/nix/store/a3wcgf58cbsh47za2y64kfj6y3iwjlqb-source/modules/hosts/cuda/default.nix"
+      "/nix/store/35kdnji7s93lls6nb7pz5sbqsagdsgwd-source/modules/hosts/cuda/default.nix"
     ]
   }
 }

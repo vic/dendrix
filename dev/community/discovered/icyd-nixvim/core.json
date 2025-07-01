@@ -1,13 +1,13 @@
 {
   "core": {
     "config": [
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/configs/core.nix"
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/configs/core.nix"
     ],
     "nixvim": [
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/options.nix",
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/keybindings.nix",
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/default.nix",
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/core/autocmds.nix"
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/core/options.nix",
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/core/keybindings.nix",
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/core/default.nix",
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/core/autocmds.nix"
     ]
   }
 }
