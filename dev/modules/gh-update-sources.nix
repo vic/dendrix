@@ -40,9 +40,8 @@ in
                     set -e
                     (cd dev; nix run nixpkgs#npins -- update)
                     rm -rf ./dev/community/discovered/*-*
-                    echo '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix
-                    nix run --accept-flake-config --override-input dendrix . --print-build-logs ./dev#genfiles
-                    rm ./dev/modules/enable-discovery.nix
+                    export DISCOVER_ASPECTS=true
+                    nix run --impure --accept-flake-config --override-input dendrix . --print-build-logs ./dev#genfiles
                     nix run --accept-flake-config --override-input dendrix . --print-build-logs ./dev#fmt
                     nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs
                   '';
