@@ -21,10 +21,14 @@
           }
         },
         {
-          "uses": "DeterminateSystems/nix-installer-action@main"
+          "uses": "cachix/install-nix-action@v38"
         },
         {
-          "uses": "DeterminateSystems/magic-nix-cache-action@main"
+          "uses": "cachix/cachix-action@v16",
+          "with": {
+            "authToken": "${{secrets.CACHIX_AUTH_TOKEN}}",
+            "name": "dendrix"
+          }
         },
         {
           "id": "check",

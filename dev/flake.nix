@@ -1,5 +1,13 @@
 {
   outputs = inputs: import ./. inputs;
+
+  nixConfig = {
+    extra-trusted-public-keys = [
+      "dendrix.cachix.org-1:OdDiPPnm0gukv156krv4p5ZWWcCpIxnlnAFvSqX1H3c="
+    ];
+    extra-substituters = [ "https://dendrix.cachix.org" ];
+  };
+
   inputs = {
     dendrix.flake = false;
     dendrix.url = "path:..";

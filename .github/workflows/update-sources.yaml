@@ -21,13 +21,17 @@
           }
         },
         {
-          "uses": "DeterminateSystems/nix-installer-action@main"
+          "uses": "cachix/install-nix-action@v38"
         },
         {
-          "uses": "DeterminateSystems/magic-nix-cache-action@main"
+          "uses": "cachix/cachix-action@v16",
+          "with": {
+            "authToken": "${{secrets.CACHIX_AUTH_TOKEN}}",
+            "name": "dendrix"
+          }
         },
         {
-          "run": "set -e\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update\nrm -rf ./dev/community/discovered/\necho '{}' > ./dev/community/discovered/trees.json\necho '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files\nrm ./dev/modules/enable-discovery.nix\nnix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs\n"
+          "run": "set -e\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update\nrm -rf ./dev/community/discovered/\necho '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files\nrm ./dev/modules/enable-discovery.nix\nnix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs\n"
         },
         {
           "id": "update",

@@ -6,6 +6,12 @@
       hatchet-protocol = "holster";
     };
   }
-  { uses = "DeterminateSystems/nix-installer-action@main"; }
-  { uses = "DeterminateSystems/magic-nix-cache-action@main"; }
+  { uses = "cachix/install-nix-action@v38"; }
+  {
+    uses = "cachix/cachix-action@v16";
+    "with" = {
+      name = "dendrix";
+      authToken = "\${{secrets.CACHIX_AUTH_TOKEN}}";
+    };
+  }
 ]
