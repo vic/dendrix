@@ -1,12 +1,12 @@
 {
   "ai": {
     "nixos": [
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/tika/default.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/searx.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/open-webui.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/ollama.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/litellm/default.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/ai/docling-serve.nix"
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/ai/tika/default.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/ai/searx.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/ai/open-webui.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/ai/ollama.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/ai/litellm/default.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/ai/docling-serve.nix"
     ]
   }
 }

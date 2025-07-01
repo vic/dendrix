@@ -1,20 +1,20 @@
 {
   "dev": {
     "homeManager": [
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/xdg.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/languages/nix.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/mergiraf.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/lazygit.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/jujutsu.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/gpg.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/git.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/gh.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/git/gh-dash.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/editors/zeditor.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/editors/vscode.nix"
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/xdg.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/languages/nix.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/git/mergiraf.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/git/lazygit.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/git/jujutsu.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/git/gpg.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/git/git.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/git/gh.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/git/gh-dash.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/editors/zeditor.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/editors/vscode.nix"
     ],
     "nixos": [
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/dev/editors/vscode.nix"
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/dev/editors/vscode.nix"
     ]
   }
 }
