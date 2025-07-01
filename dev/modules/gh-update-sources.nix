@@ -30,16 +30,16 @@ in
               group = "update";
               cancel-in-progress = true;
             };
-            jobs.check = {
+            jobs.update = {
               environment.name = "update-sources";
               environment.url = "\${{steps.update.outputs.pull-request-url}}";
               runs-on = "ubuntu-latest";
               steps = (import ./_gh-provision-nix.nix) ++ [
                 {
-                  run = "rm -rf ./dev/community/discovered/";
+                  run = "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update";
                 }
                 {
-                  run = "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update";
+                  run = "rm -rf ./dev/community/discovered/";
                 }
                 {
                   run = "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c discover";
