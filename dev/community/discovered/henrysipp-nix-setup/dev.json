@@ -1,16 +1,16 @@
 {
   "dev": {
     "homeManager": [
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/sapling.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/git.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/editors/vscode.nix"
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/sapling.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/git.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/editors/vscode.nix"
     ],
     "nixos": [
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/sapling.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/packages.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/languages.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/firewall.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/dev/editors/vscode.nix"
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/sapling.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/packages.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/languages.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/firewall.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/dev/editors/vscode.nix"
     ]
   }
 }

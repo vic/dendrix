@@ -1,10 +1,10 @@
 {
   "lsp": {
     "nixvim": [
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/otter.nix",
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/lint.nix",
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/format.nix",
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/lsp/default.nix"
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/lsp/otter.nix",
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/lsp/lint.nix",
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/lsp/format.nix",
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/lsp/default.nix"
     ]
   }
 }

@@ -1,10 +1,10 @@
 {
   "guren": {
     "hosts": [
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/hosts/guren/omarchy.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/hosts/guren/hardware-configuration.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/hosts/guren/default.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/hosts/guren/boot.nix"
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/hosts/guren/omarchy.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/hosts/guren/hardware-configuration.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/hosts/guren/default.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/hosts/guren/boot.nix"
     ]
   }
 }

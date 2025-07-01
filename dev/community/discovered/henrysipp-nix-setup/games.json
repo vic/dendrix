@@ -1,12 +1,12 @@
 {
   "games": {
     "homeManager": [
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/games/mangohud.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/games/default.nix"
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/games/mangohud.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/games/default.nix"
     ],
     "nixos": [
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/games/gamescope.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/games/default.nix"
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/games/gamescope.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/games/default.nix"
     ]
   }
 }
