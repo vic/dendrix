@@ -38,11 +38,12 @@ in
                 {
                   run = ''
                     set -e
-                    nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update
+                    (cd dev; nix run nixpkgs#npins -- update)
                     rm -rf ./dev/community/discovered/*-*
                     echo '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix
-                    nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files
+                    nix run --accept-flake-config --override-input dendrix . --print-build-logs ./dev#genfiles
                     rm ./dev/modules/enable-discovery.nix
+                    nix run --accept-flake-config --override-input dendrix . --print-build-logs ./dev#fmt
                     nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs
                   '';
                 }
@@ -56,8 +57,8 @@ in
                     branch-suffix = "timestamp";
                     title = "Update community sources.";
                     body = "Please review.";
-                    assignees = "vic,copilot";
-                    reviewers = "vic,copilot";
+                    assignees = "vic";
+                    reviewers = "vic,copilot-pull-request-reviewer";
                   };
                 }
               ];

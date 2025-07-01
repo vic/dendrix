@@ -31,19 +31,19 @@
           }
         },
         {
-          "run": "set -e\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update\nrm -rf ./dev/community/discovered/*-*\necho '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files\nrm ./dev/modules/enable-discovery.nix\nnix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs\n"
+          "run": "set -e\n(cd dev; nix run nixpkgs#npins -- update)\nrm -rf ./dev/community/discovered/*-*\necho '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix\nnix run --accept-flake-config --override-input dendrix . --print-build-logs ./dev#genfiles\nrm ./dev/modules/enable-discovery.nix\nnix run --accept-flake-config --override-input dendrix . --print-build-logs ./dev#fmt\nnix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs\n"
         },
         {
           "id": "update",
           "uses": "peter-evans/create-pull-request@v7",
           "with": {
-            "assignees": "vic,copilot",
+            "assignees": "vic",
             "author": "Victor Borja <vborja@apache.org>",
             "body": "Please review.",
             "branch": "update-sources",
             "branch-suffix": "timestamp",
             "commit-message": "Update sources",
-            "reviewers": "vic,copilot",
+            "reviewers": "vic,copilot-pull-request-reviewer",
             "title": "Update community sources."
           }
         }
