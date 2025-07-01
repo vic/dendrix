@@ -3,7 +3,7 @@ module Search exposing (main)
 import Browser
 import Data
 import Deco
-import Html exposing (Html, a, div, h2, input, label, small, span, text)
+import Html exposing (Html, a, div, h4, input, label, small, span, text)
 import Html.Attributes exposing (checked, disabled, href, style, type_)
 import Html.Events exposing (onClick)
 import Json.Decode as D
@@ -191,11 +191,11 @@ view model =
             list |> List.length |> String.fromInt
     in
     div []
-        [ h2 [] [ text ("Dendritic Repositories (" ++ count availableRepos ++ ")") ]
+        [ h4 [] [ text ("Dendritic Repositories (" ++ count availableRepos ++ ")") ]
         , viewRepoAndTreeCheckboxes model availableRepos
-        , h2 [] [ text ("Nix Config Classes (" ++ count availableClasses ++ ")") ]
+        , h4 [] [ text ("Nix Config Classes (" ++ count availableClasses ++ ")") ]
         , viewCheckboxList model.allClasses availableClasses model.selectedClasses ToggleClass
-        , h2 [] [ text ("Dendritic Aspects (" ++ count availableAspects ++ ")") ]
+        , h4 [] [ text ("Dendritic Aspects (" ++ count availableAspects ++ ")") ]
         , viewCheckboxList model.allAspects availableAspects model.selectedAspects ToggleAspect
         ]
 
@@ -264,11 +264,9 @@ viewRepoAndTreeCheckboxes model availableRepos =
                                 []
                             , text repo.name
                             ]
-                        , div [ style "cursor" "pointer", onClick (ToggleCollapse repo.name), style "margin-left" "auto", style "display" "flex", style "align-items" "center" ]
-                            [ span [ style "margin-right" "5px" ]
-                                [ small [] [ a [ href repoHome ] [ text "(home)" ] ]
-                                ]
-                            , span [ style "margin-left" "5px", style "width" "1em" ]
+                        , div [ style "cursor" "pointer", style "margin-left" "auto", style "display" "flex", style "align-items" "center" ]
+                            [ small [ style "margin-right" "5px" ] [ a [ href repoHome ] [ text "(home)" ] ]
+                            , span [ onClick (ToggleCollapse repo.name), style "display" "block ruby" ]
                                 [ text
                                     (if isCollapsed then
                                         "►"
@@ -276,8 +274,8 @@ viewRepoAndTreeCheckboxes model availableRepos =
                                      else
                                         "▼"
                                     )
+                                , small [] [ text ("(" ++ String.fromInt treeCount ++ " trees)") ]
                                 ]
-                            , small [] [ text ("(" ++ String.fromInt treeCount ++ " trees)") ]
                             ]
                         ]
                     , if isCollapsed then
