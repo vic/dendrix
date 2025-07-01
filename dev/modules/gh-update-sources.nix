@@ -15,9 +15,11 @@ in
               workflow_call = { };
               workflow_dispatch = { };
               repository_dispatch = { };
-              schedule = [{
-                cron = "0 5 * * *";
-              }];
+              schedule = [
+                {
+                  cron = "0 5 * * *";
+                }
+              ];
             };
             permissions = {
               contents = "write";
@@ -33,6 +35,9 @@ in
               environment.url = "\${{steps.update.outputs.pull-request-url}}";
               runs-on = "ubuntu-latest";
               steps = (import ./_gh-provision-nix.nix) ++ [
+                {
+                  run = "rm -rf ./dev/community/discovered/";
+                }
                 {
                   run = "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update";
                 }

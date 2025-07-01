@@ -27,6 +27,9 @@
           "uses": "DeterminateSystems/magic-nix-cache-action@main"
         },
         {
+          "run": "rm -rf ./dev/community/discovered/"
+        },
+        {
           "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update"
         },
         {
@@ -55,9 +58,11 @@
   "name": "update sources",
   "on": {
     "repository_dispatch": {},
-    "schedule": {
-      "cron": "0 0 * * *"
-    },
+    "schedule": [
+      {
+        "cron": "0 5 * * *"
+      }
+    ],
     "workflow_call": {},
     "workflow_dispatch": {}
   },
