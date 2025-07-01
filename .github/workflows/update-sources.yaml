@@ -1,0 +1,69 @@
+{
+  "concurrency": {
+    "cancel-in-progress": true,
+    "group": "update"
+  },
+  "jobs": {
+    "check": {
+      "environment": {
+        "name": "update-sources",
+        "url": "${{steps.update.outputs.pull-request-url}}"
+      },
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "uses": "actions/checkout@v4"
+        },
+        {
+          "uses": "wimpysworld/nothing-but-nix@main",
+          "with": {
+            "hatchet-protocol": "holster"
+          }
+        },
+        {
+          "uses": "DeterminateSystems/nix-installer-action@main"
+        },
+        {
+          "uses": "DeterminateSystems/magic-nix-cache-action@main"
+        },
+        {
+          "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update"
+        },
+        {
+          "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c discover"
+        },
+        {
+          "run": "nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs"
+        },
+        {
+          "id": "update",
+          "uses": "peter-evans/create-pull-request@v7",
+          "with": {
+            "assignees": "vic,copilot",
+            "author": "Victor Borja <vborja@apache.org>",
+            "body": "Please review.",
+            "branch": "update-sources",
+            "branch-suffix": "timestamp",
+            "commit-message": "Update sources",
+            "reviewers": "vic,copilot",
+            "title": "Update community sources."
+          }
+        }
+      ]
+    }
+  },
+  "name": "update sources",
+  "on": {
+    "repository_dispatch": {},
+    "schedule": {
+      "cron": "0 0 * * *"
+    },
+    "workflow_call": {},
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "write",
+    "id-token": "write",
+    "pull-requests": "write"
+  }
+}
