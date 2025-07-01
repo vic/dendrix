@@ -1,15 +1,15 @@
 {
   "desktop": {
     "homeManager": [
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/web-browsers/firefox.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/fonts/fonts.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/kdeplasma.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/default.nix"
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/desktop/web-browsers/firefox.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/desktop/fonts/fonts.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/desktop/environment/kdeplasma.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/desktop/environment/default.nix"
     ],
     "nixos": [
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/fonts/fonts.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/winbox.nix",
-      "/nix/store/pbff622ycmk7arbf7my5prcg2j5z169s-source/modules/desktop/environment/default.nix"
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/desktop/fonts/fonts.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/desktop/environment/winbox.nix",
+      "/nix/store/357xahdzgmmbkqmawphqz9sz1a6gvs9v-source/modules/desktop/environment/default.nix"
     ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "project-nvim": {
     "nixvim": [
-      "/nix/store/w56l398nc3bbqw5l1485vp2i1rqhgrl7-source/modules/project-nvim.nix"
+      "/nix/store/hnls1svr87barakf61d003clkb5pk95z-source/modules/project-nvim.nix"
     ]
   }
 }

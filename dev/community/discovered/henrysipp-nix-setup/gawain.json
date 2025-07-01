@@ -1,10 +1,10 @@
 {
   "gawain": {
     "hosts": [
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/hosts/gawain/hardware-configuration.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/hosts/gawain/default.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/hosts/gawain/boot.nix",
-      "/nix/store/glss124q4s3r1blqv78x4g5pylxj0bkc-source/modules/base/nvidia/default.nix"
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/hosts/gawain/hardware-configuration.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/hosts/gawain/default.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/hosts/gawain/boot.nix",
+      "/nix/store/lpnd1hzjg10a8v4hjq6bcarlrh2kcmf4-source/modules/base/nvidia/default.nix"
     ]
   }
 }

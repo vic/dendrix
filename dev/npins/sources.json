@@ -22,9 +22,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "c2906862413dccd1745ce26e0172cac4381c34bd",
-      "url": "https://github.com/dliberalesso/nix-config/archive/c2906862413dccd1745ce26e0172cac4381c34bd.tar.gz",
-      "hash": "1yy5awx9f5pjwiycw5kapfxn6hgffdqwsdj5zj8p0yl7i13hfysh"
+      "revision": "e78eae677a5545aed7dfeea9167e2f1298d06d9b",
+      "url": "https://github.com/dliberalesso/nix-config/archive/e78eae677a5545aed7dfeea9167e2f1298d06d9b.tar.gz",
+      "hash": "0jz69j3f5ynlfjmxjvw3gi3ys02sgzjyfi67xawz844gx1clj07c"
     },
     "drupol-infra": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a10da3a0e88d17566918fa8db69fa0faa9e1d0c8",
-      "url": "https://github.com/drupol/infra/archive/a10da3a0e88d17566918fa8db69fa0faa9e1d0c8.tar.gz",
-      "hash": "0sa6psv1k7crlzlz1a3zac8ldwvbr3w26x5awlbpxyv7f67fr5z3"
+      "revision": "d168261d989d5b5814cb13eb9b9142078e202c5f",
+      "url": "https://github.com/drupol/infra/archive/d168261d989d5b5814cb13eb9b9142078e202c5f.tar.gz",
+      "hash": "150kxqlf47fl0r6z0fz9a2qgikh95rs2x9zf3yjamxmqdjx50gz1"
     },
     "gaetanlepage-nix-config": {
       "type": "Git",
@@ -48,9 +48,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "1d2b2faa7dc402b64e4fad02dd8ce85bce5c15cd",
-      "url": "https://github.com/gaetanlepage/nix-config/archive/1d2b2faa7dc402b64e4fad02dd8ce85bce5c15cd.tar.gz",
-      "hash": "02wlqc2a1zxmmq47xw1i36gm2c4sl06mrawmia72ll38imd4iz9y"
+      "revision": "c97af82e25d96d720d9871c4d31d1479a7d3667e",
+      "url": "https://github.com/gaetanlepage/nix-config/archive/c97af82e25d96d720d9871c4d31d1479a7d3667e.tar.gz",
+      "hash": "16385vs1rf9syc9m8fgyrhm1w3qlk77w7x9m61c7vsx92zy0923a"
     },
     "henrysipp-nix-setup": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "5fbfdf52685dd13ecf96e418a9a83af95787e787",
-      "url": "https://github.com/henrysipp/nix-setup/archive/5fbfdf52685dd13ecf96e418a9a83af95787e787.tar.gz",
-      "hash": "0zwvd0q21aqx4man526jm0r1h4pp3jw8dknca9wlr09mh6mwj8gn"
+      "revision": "48a93d0275eba0adf48977609fc100dce8f9b49c",
+      "url": "https://github.com/henrysipp/nix-setup/archive/48a93d0275eba0adf48977609fc100dce8f9b49c.tar.gz",
+      "hash": "0zlz8x7fv1lz8ma5wyy652s3gdfjda9m81icf9cql6cfrs1w4ixm"
     },
     "icyd-nixvim": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "6bf416ad3ba76a24afb287fa989561f5bcde1bd2",
-      "url": "https://github.com/icyd/nixvim/archive/6bf416ad3ba76a24afb287fa989561f5bcde1bd2.tar.gz",
-      "hash": "161kiiq4ih6jl98bynhsx2rbl1qfjnwnaign6wy3r4b9dqlwvk39"
+      "revision": "f3b8fb687c6c59af13c569f8201d0359088e2ada",
+      "url": "https://github.com/icyd/nixvim/archive/f3b8fb687c6c59af13c569f8201d0359088e2ada.tar.gz",
+      "hash": "1k4clhy4ipx92zp8c7q2jgx0q2x10jj19fnsyrlmf6m56wh73kz9"
     },
     "quasigod-nixconfig": {
       "type": "Git",

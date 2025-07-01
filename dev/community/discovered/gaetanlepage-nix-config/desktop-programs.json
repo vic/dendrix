@@ -1,7 +1,7 @@
 {
   "desktop-programs": {
     "homeManager": [
-      "/nix/store/a3wcgf58cbsh47za2y64kfj6y3iwjlqb-source/modules/home/desktop/programs.nix"
+      "/nix/store/35kdnji7s93lls6nb7pz5sbqsagdsgwd-source/modules/home/desktop/programs.nix"
     ]
   }
 }
