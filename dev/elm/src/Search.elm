@@ -299,7 +299,7 @@ viewRepoAndTreeCheckboxes model availableRepos =
                                             tree.aspects |> List.concatMap (\a -> a.files)
 
                                         filesUrl =
-                                            "https://github.com/vic/dendrix/blob/main/dev/modules/community/discovered/" ++ repo.name ++ "/" ++ tree.name ++ ".json"
+                                            "https://github.com/vic/dendrix/blob/main/dev/community/discovered/" ++ repo.name ++ "/" ++ tree.name ++ ".json"
                                     in
                                     div [ style "margin-left" "auto", style "display" "flex" ]
                                         [ label
