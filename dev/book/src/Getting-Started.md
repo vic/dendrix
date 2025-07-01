@@ -2,6 +2,31 @@
 
 ## Usage (for existing flake-parts setups)
 
+Add the `dendrix` input to your flake:
+
+```nix
+# flake.nix -- add the dendrix input:
+{
+  inputs.dendrix.url = "github:vic/dendrix";
+
+  # Flatten dependencies.
+  #inputs.dendrix.inputs.import-tree.follows = "import-tree";
+  #inputs.dendrix.inputs.nixpkgs-lib.follows = "nixpkgs-lib";
+}
+```
+
+Then import Dendrix trees/layers on any flake-parts module of yours:
+
+```nix
+{ inputs, ... }:
+{
+  imports = [
+    # inputs.dendrix.vic-vix.macos-keys # example <macos-keys> aspect.
+    # inputs.dendrix.vix # example layer, see https://github.com/vic/dendrix/tree/main/dev/layers
+  ];
+}
+```
+
 See usage instructions for either [Dendrix Trees](Dendrix-Trees.html#using-community-import-trees) or [Dendrix Layers](Dendrix-Layers.html#using-existing-layers).
 
 ## Quick Start (for NixOS newcomers)

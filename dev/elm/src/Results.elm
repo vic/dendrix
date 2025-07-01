@@ -4,8 +4,8 @@ import Browser
 import Data
 import Deco
 import Dict exposing (Dict)
-import Html exposing (Html, button, code, div, p, pre, text)
-import Html.Attributes exposing (class, id)
+import Html exposing (Html, a, button, code, div, p, pre, text)
+import Html.Attributes exposing (class, href, id)
 import Html.Events exposing (onClick)
 import Json.Decode as D
 import Json.Encode as E
@@ -121,11 +121,12 @@ viewSelectedRepos model =
     , p []
         [ text "Add the following to your "
         , code [] [ text "flake.nix" ]
-        , text " to include these configuration modules."
+        , text " to include these configuration modules. See also: "
+        , a [ href "Getting-Started.html" ] [ text "Usage for Dendrix Trees/Layers" ]
         ]
     , viewUsageCode model.repos
     , p []
-        [ text "Then on any flake module of yours, extend any of these aspects with your custom configs, like:"
+        [ text "On a flake module of yours, extend any of these aspects with your custom configs, like:"
         , div []
             [ pre []
                 [ code [ class "language-nix" ]
@@ -168,20 +169,19 @@ viewUsageCode repos =
                 repoImports =
                     List.map
                         (\( repoName, treeName ) ->
-                            String.concat [ "      inputs.dendrix.", repoName, ".", treeName, "\n" ]
+                            String.concat [ "    inputs.dendrix.", repoName, ".", treeName, "\n" ]
                         )
                         trees
 
                 codes =
-                    [ """# flake.nix
+                    [ """# modules/dendrix-imports.nix -- on any module of yours.
+{ inputs, ... }:
 {
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } 
-    (inputs.import-tree [
-      ./modules # your modules"""
+  imports = ["""
                     , "\n"
                     ]
                         ++ repoImports
-                        ++ [ "    ]);\n}", "\n" ]
+                        ++ [ "  ];\n}", "\n" ]
               in
               text (String.concat codes)
             ]
