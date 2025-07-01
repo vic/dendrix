@@ -15,9 +15,9 @@ in
               workflow_call = { };
               workflow_dispatch = { };
               repository_dispatch = { };
-              schedule = {
-                cron = "0 0 * * *";
-              };
+              schedule = [{
+                cron = "0 5 * * *";
+              }];
             };
             permissions = {
               contents = "write";
