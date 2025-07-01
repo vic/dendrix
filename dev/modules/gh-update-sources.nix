@@ -36,16 +36,16 @@ in
               runs-on = "ubuntu-latest";
               steps = (import ./_gh-provision-nix.nix) ++ [
                 {
-                  run = "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update";
-                }
-                {
-                  run = "rm -rf ./dev/community/discovered/";
-                }
-                {
-                  run = "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c discover";
-                }
-                {
-                  run = "nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs";
+                  run = ''
+                    set -e
+                    nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update
+                    rm -rf ./dev/community/discovered/
+                    echo '{}' > ./dev/community/discovered/trees.json
+                    echo '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix
+                    nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files
+                    rm ./dev/modules/enable-discovery.nix
+                    nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs
+                  '';
                 }
                 {
                   id = "update";

@@ -27,16 +27,7 @@
           "uses": "DeterminateSystems/magic-nix-cache-action@main"
         },
         {
-          "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update"
-        },
-        {
-          "run": "rm -rf ./dev/community/discovered/"
-        },
-        {
-          "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c discover"
-        },
-        {
-          "run": "nix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs"
+          "run": "set -e\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update\nrm -rf ./dev/community/discovered/\necho '{}' > ./dev/community/discovered/trees.json\necho '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files\nrm ./dev/modules/enable-discovery.nix\nnix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs\n"
         },
         {
           "id": "update",
