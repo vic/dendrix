@@ -4,7 +4,7 @@
     "group": "update"
   },
   "jobs": {
-    "check": {
+    "update": {
       "environment": {
         "name": "update-sources",
         "url": "${{steps.update.outputs.pull-request-url}}"
@@ -27,10 +27,10 @@
           "uses": "DeterminateSystems/magic-nix-cache-action@main"
         },
         {
-          "run": "rm -rf ./dev/community/discovered/"
+          "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update"
         },
         {
-          "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update"
+          "run": "rm -rf ./dev/community/discovered/"
         },
         {
           "run": "nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c discover"
