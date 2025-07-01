@@ -31,7 +31,7 @@
           }
         },
         {
-          "run": "set -e\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update\nrm -rf ./dev/community/discovered/\necho '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files\nrm ./dev/modules/enable-discovery.nix\nnix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs\n"
+          "run": "set -e\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update\nrm -rf ./dev/community/discovered/*-*\necho '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix\nnix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files\nrm ./dev/modules/enable-discovery.nix\nnix flake --accept-flake-config check path:dev --override-input dendrix . --print-build-logs\n"
         },
         {
           "id": "update",

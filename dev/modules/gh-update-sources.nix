@@ -39,7 +39,7 @@ in
                   run = ''
                     set -e
                     nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c pins update
-                    rm -rf ./dev/community/discovered/
+                    rm -rf ./dev/community/discovered/*-*
                     echo '{ dendrix.discover-community-aspects = true; }' > ./dev/modules/enable-discovery.nix
                     nix develop --accept-flake-config --override-input dendrix . --print-build-logs ./dev -c files
                     rm ./dev/modules/enable-discovery.nix
