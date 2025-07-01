@@ -6,7 +6,7 @@
       hatchet-protocol = "holster";
     };
   }
-  { uses = "cachix/install-nix-action@v38"; }
+  { uses = "cachix/install-nix-action@v31"; }
   {
     uses = "cachix/cachix-action@v16";
     "with" = {
