@@ -57,7 +57,6 @@ in
                     title = "Update community sources.";
                     body = "Please review.";
                     assignees = "vic";
-                    reviewers = "vic,copilot-pull-request-reviewer";
                   };
                 }
               ];

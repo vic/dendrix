@@ -43,7 +43,6 @@
             "branch": "update-sources",
             "branch-suffix": "timestamp",
             "commit-message": "Update sources",
-            "reviewers": "vic,copilot-pull-request-reviewer",
             "title": "Update community sources."
           }
         }
