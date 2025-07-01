@@ -13,9 +13,40 @@
       };
 
       imports = [
+        layersNix
         elmFlag
         treesJson
       ] ++ generatedTrees;
+
+      layersNix = lib.pipe config.dendrix.layers [
+        (lib.attrNames)
+        (lib.map (
+          name: "# inputs.dendrix.${name} # see https://github.com/vic/dendrix/tree/main/dev/layers/${name}"
+        ))
+        (
+          codes:
+          let
+            path_ = "templates/default/modules/layers.nix";
+          in
+          {
+            treefmt.settings.formatter.deadnix.excludes = [ path_ ];
+            treefmt.settings.formatter.nixf-diagnose.excludes = [ path_ ];
+            files.files = [
+              {
+                inherit path_;
+                drv = pkgs.writers.writeText "repos.js" ''
+                  { inputs, ... }:
+                  {
+                    imports = [
+                  ${lib.concatMapStrings (x: "    " + x + "\n") codes}
+                    ];
+                  }
+                '';
+              }
+            ];
+          }
+        )
+      ];
 
       generatedTrees = lib.pipe config.dendrix.community [
         (lib.mapAttrsToList (repo-name: repo: lib.mapAttrsToList (treeMod repo-name) repo.trees))

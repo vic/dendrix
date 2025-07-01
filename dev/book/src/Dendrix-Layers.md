@@ -22,24 +22,36 @@ If you were to use the example AI layer (from below), you'd do the following on 
 
 ## Creating Layers
 
+A Dendrix Layer is defined at `./dev/layers/<name>/modules/**.nix`. If you create one, make sure you
+also provide a `./dev/layers/<name>/README.md` with details about usage or input requirements.
+
 For example, if the community comes up with an `ai` aspect shared across different repos, we
 could have a _blessed_ ai layer providing files from both repos and community-managed configurations.
 
 ```nix
 # This is an example of how an AI Layer might be defined in our Dendrix community repository.
 #
-# ./dev/layers/ai.nix
-{ inputs, config, ... }:
+# ./dev/layers/ai/modules/default.nix
+{ inputs, lib, ... }:
 let
-  ai-one = config.dendrix.community.repo-one.import-tree.ai; # import-tree for AI aspect from repo-one.
-  ai-two = config.dendrix.community.repo-two.import-tree.ai; # import-tree for AI aspect from repo-two.
-  ai-community = inputs.import-tree.addPath ./ai; # community-managed AI from ./dev/layers/ai/**.nix
+  ai-one = inputs.dendrix.repo-one.ai; # import-tree for AI aspect from repo-one.
+  ai-two = inputs.dendrix.repo-two.ai; # import-tree for AI aspect from repo-two.
 in
 {
-  dendrix.layers.ai = {lib, ...}: {
-    imports = [ ai-one ai-two ai-community ];
-    options.ai.something.enable = lib.mkEnableOption "Enable something for AI";
+  imports = [ ai-one ai-two ];
+
+  # flake-level community options.
+  options.ai.something.enable = lib.mkEnableOption "Enable something for AI";
+
+  # packages,checks,devshells,etc for AI
+  perSystem = {pkgs, ...}: {
+    packages.ai-cli = { };
   };
+
+  # extensions to the ai aspect.
+  flake.modules.nixos.ai = { };
+  flake.modules.darwin.ai = { };
+  flake.modules.homeManager.ai = { };
 }
 ```
 

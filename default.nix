@@ -15,7 +15,7 @@ let
 
   module = inputs.import-tree [
     ./dev/community
-    ((inputs.import-tree.addPath ./dev/layers).match ".+/dev/layers/[^/]+.nix")
+    ./dev/layers/options.nix
   ];
 
   ev = lib.modules.evalModules {
