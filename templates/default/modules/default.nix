@@ -1,8 +1,8 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.flake-parts.flakeModules.modules
+    inputs.flake-file.flakeModules.dendritic
   ];
 
-  systems = import inputs.systems;
+  flake-file.description = "A dendritic setup.";
 }
