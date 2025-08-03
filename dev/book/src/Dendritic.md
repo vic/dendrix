@@ -2,7 +2,7 @@
 
 [Dendritic](https://github.com/mightyiam/dendritic) is a [pattern](https://discourse.nixos.org/t/pattern-every-file-is-a-flake-parts-module/61271) for writing nix configurations based on [flake-parts](https://flake.parts)'s [`modules` option](https://flake.parts/options/flake-parts-modules.html).
 
-We say that Dendritic nix configurations are _aspect-oriented_ meaning that each nix file
+We say that Dendritic nix configurations are _aspect-oriented_, meaning that each nix file
 provides config-values for the same _aspect_ across different nix configuration classes.
 
 This is done via flake-parts' `flake.modules.<class>.<aspect>` options.
@@ -43,9 +43,9 @@ will notice your code now incorporates the following:
 
 ## Denritic Advantages
 
-### No need to use specialArgs for communicating values.
+### No need to use `specialArgs` for communicating values.
 
-A common pattern for passing values between different nix configurations types (eg between a `nixos` config and a `homeManager` one),
+A common pattern for passing values between different nix configurations types (e.g., between a `nixos` config and a `homeManager` one),
 is to use the [`specialArgs`](https://nixos.org/manual/nixos/stable/options#opt-_module.args) module argument or [`home-manager.extraSpecialArgs`](https://home-manager.dev/manual/23.11/nixos-options.xhtml#nixos-opt-home-manager.extraSpecialArgs).
 
 This is considered an _anti-pattern in dendritic setups_, since there's no need to use `specialArgs` at all. Because you can
@@ -89,7 +89,7 @@ This is possible because:
 In a Dendritic setup, each `.nix` file has only one interpretation: A flake-parts module.
 
 Unlike other kinds of setup where each nix file can be a `nixos` configuration, or a `home-manager` configuration, or
-a package, or something entrely different. In such setups, loading a file requires you to know what kind of meaning
+a package, or something entirely different. In such setups, loading a file requires you to know what kind of meaning
 each file has before importing it.
 
 This leads us to having:
@@ -147,7 +147,7 @@ instead of where they are applied.
 
 ### Feature _Closures_
 
-By closure we mean: everything that is needed for a given _feature_ to work is
+By closure, we mean: everything that is needed for a given _feature_ to work is
 configured closely, in the same unit (file/directory named after the feature).
 
 Because a single `feature.nix` contributes to different configuration classes, it has all
@@ -169,7 +169,7 @@ files from your modules (or adding an `_` for them to be ignored) has no
 other impact than the overall capabilities provided into your systems.
 
 This is an easy way to disable loading files while on a huge refactor. Or when some hosts
-or features should be decomissioned immediatly/temporarily.
+or features should be decommissioned immediately/temporarily.
 
 ### No dependencies other than flake-parts
 
