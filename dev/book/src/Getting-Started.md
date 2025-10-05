@@ -46,7 +46,7 @@ Then edit your [`layers.nix`](https://github.com/vic/dendrix/tree/main/templates
 ### Try it Online!
 
 If you are not currently a NixOS user, you can try
-running an ephemereal NixOS on the web.
+running an ephemeral NixOS on the web.
 
 - Go to [Distrosea NixOS](https://distrosea.com/select/nixos/), select latest `minimal` release.
 - Start a machine and run the following:
