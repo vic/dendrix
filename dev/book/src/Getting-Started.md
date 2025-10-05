@@ -48,13 +48,11 @@ Then edit your [`layers.nix`](https://github.com/vic/dendrix/tree/main/templates
 If you are not currently a NixOS user, you can try
 running an ephemereal NixOS on the web.
 
-- Go to [Distrosea nixos-unstable-minimal](https://distrosea.com/start/nixos-unstable-minimal/)
-
-Start a machine and run the following:
+- Go to [Distrosea NixOS](https://distrosea.com/select/nixos/), select latest `minimal` release.
+- Start a machine and run the following:
 
 ```shell
 nix run .#os-switch template
-
 ```
 
 ## Customization
