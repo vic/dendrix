@@ -145,7 +145,25 @@ As noted by Pol Dellaiera in [Flipping the Configuration Matrix](https://not-a-n
 > the configuration is now structured around features, not hostnames. It is a shift in the axis of composition, essentially an inversion of configuration control. What may seem like a subtle change at first has profound implications for flexibility, reuse, and maintainability.
 
 You will notice that you start naming your files around the `aspect`s (features) they define
-instead of where they are applied.
+instead of where they are specifically applied.
+
+In the following example, the `scrolling-desktop` aspect is included accross different operating systems:
+On Linux, `flake.modules.nixos.scrolling-destop` might enable [`niri`](https://variety4me.github.io/niri_docs/) and on MacOS, `flake.modules.darwin.scrolling-desktop` might enable [`PaperWM.spoon`](https://github.com/mogenson/PaperWM.spoon).
+
+```nix
+# ./modules/hosts.nix
+{ inputs, ... }:
+{
+  flake.nixosConfigurations.my-host = inputs.nixpkgs.lib.nixosSystem {
+    system = "aarm64-linux";
+    modules = with inputs.self.modules.nixos;  [ ai ssh vpn mac-like-keyboard scrolling-desktop ];
+  };
+  flake.darwinConfigurations.my-host = inputs.nix-darwin.lib.darwinSystem {
+    system = "aarm64-darwin";
+    modules = with inputs.self.modules.darwin; [ ai ssh vpn scrolling-desktop ];
+  };
+}
+```
 
 ### Feature _Closures_
 
