@@ -120,18 +120,20 @@ This means we can have:
 
 ### Minimal and focused flake.nix
 
-Instead of having huge `flake.nix` files with lots of nix logic inside the flake itself.
-It is now possible move to all nix logic into `./modules`.
+Instead of having huge `flake.nix` files with lots of nix logic inside. It is now possible
+to move all nix logic into well organized auto-imported flake-parts in `./modules`. This way, `flake.nix` serves more as a manifest of dependencies and flake entrypoint.
 
-Your flake becomes minimal, focused on defining inputs and possibly cache, experimental-features config.
+Some people go a step further and use [vic/flake-file](https://github.com/vic/flake-file) to manage their flake.nix automatically, by letting each flake-part module also define the flake inputs needed by each module.
 
-And any file inside modules can contribute to flake outputs (packages/checks/osConfigurations) as needed.
+Any flake-parts module can contribute to flake.nix as needed, either inputs/flake-configuration (by using `vic/flake-file`) or outputs (modules/packages/checks/osConfigurations/etc).
 
 ```nix
-# modules/flake/formatter.nix
+# ./modules/home/vim.nix
+{ inputs, ... }:
 {
-  perSystem = {pkgs, ...}: {
-    formatter = pkgs.alejandra;
+  flake-file.inputs.nixvim.url = "github:nix-community/nixvim";
+  flake.modules.homeManager.vim = {
+    # use inputs.nixvim
   };
 }
 ```
