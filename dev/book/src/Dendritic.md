@@ -120,18 +120,20 @@ This means we can have:
 
 ### Minimal and focused flake.nix
 
-Instead of having huge `flake.nix` files with lots of nix logic inside the flake itself.
-It is now possible move to all nix logic into `./modules`.
+Instead of having huge `flake.nix` files with lots of nix logic inside. It is now possible
+to move all nix logic into well organized auto-imported flake-parts in `./modules`. This way, `flake.nix` serves more as a manifest of dependencies and flake entrypoint.
 
-Your flake becomes minimal, focused on defining inputs and possibly cache, experimental-features config.
+Some people go a step further and use [vic/flake-file](https://github.com/vic/flake-file) to manage their flake.nix automatically, by letting each flake-part module also define the flake inputs needed by each module.
 
-And any file inside modules can contribute to flake outputs (packages/checks/osConfigurations) as needed.
+Any flake-parts module can contribute to flake.nix as needed, either inputs/flake-configuration (by using `vic/flake-file`) or outputs (modules/packages/checks/osConfigurations/etc).
 
 ```nix
-# modules/flake/formatter.nix
+# ./modules/home/vim.nix
+{ inputs, ... }:
 {
-  perSystem = {pkgs, ...}: {
-    formatter = pkgs.alejandra;
+  flake-file.inputs.nixvim.url = "github:nix-community/nixvim";
+  flake.modules.homeManager.vim = {
+    # use inputs.nixvim
   };
 }
 ```
@@ -143,7 +145,25 @@ As noted by Pol Dellaiera in [Flipping the Configuration Matrix](https://not-a-n
 > the configuration is now structured around features, not hostnames. It is a shift in the axis of composition, essentially an inversion of configuration control. What may seem like a subtle change at first has profound implications for flexibility, reuse, and maintainability.
 
 You will notice that you start naming your files around the `aspect`s (features) they define
-instead of where they are applied.
+instead of where they are specifically applied.
+
+In the following example, the `scrolling-desktop` aspect is included accross different operating systems:
+On Linux, `flake.modules.nixos.scrolling-destop` might enable [`niri`](https://variety4me.github.io/niri_docs/) and on MacOS, `flake.modules.darwin.scrolling-desktop` might enable [`PaperWM.spoon`](https://github.com/mogenson/PaperWM.spoon).
+
+```nix
+# ./modules/hosts.nix
+{ inputs, ... }:
+{
+  flake.nixosConfigurations.my-host = inputs.nixpkgs.lib.nixosSystem {
+    system = "aarm64-linux";
+    modules = with inputs.self.modules.nixos;  [ ai ssh vpn mac-like-keyboard scrolling-desktop ];
+  };
+  flake.darwinConfigurations.my-host = inputs.nix-darwin.lib.darwinSystem {
+    system = "aarm64-darwin";
+    modules = with inputs.self.modules.darwin; [ ai ssh vpn scrolling-desktop ];
+  };
+}
+```
 
 ### Feature _Closures_
 
