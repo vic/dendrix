@@ -5,12 +5,16 @@
 We say that Dendritic nix configurations are _aspect-oriented_, meaning that each nix file
 provides config-values for the same _aspect_ across different nix configuration classes.
 
-This is done via flake-parts' `flake.modules.<class>.<aspect>` options.
+Normally, this is done via flake-parts' `flake.modules.<class>.<aspect>` options.
 
 Where `<class>` is a type of configuration, like [`nixos`](https://nixos.org/manual/nixos/stable/options), [`darwin`](https://nix-darwin.github.io/nix-darwin/manual/), [`homeManager`](https://home-manager.dev/manual/23.11/options.xhtml), [`nixvim`](https://nix-community.github.io/nixvim/search/), etc.
 
 And `<aspect>` is the _cross-cutting concern_ or _feature_ that is being configured across
 one or more of these classes.
+
+> [!NOTE]
+> Dendritic is a configuration *pattern* - a way-of-doing-. Not a library nor a framework.
+> See [No Dependencies](#no-dependencies).
 
 ### Example of a dendritic configuration.
 
@@ -19,21 +23,23 @@ As an example of what a dendritic nix config looks like, suppose we want to conf
 
 ```nix
 # modules/ssh.nix -- like every other file inside modules, this is a flake-parts module.
-{ config, ... }: {
+{ inputs, config, ... }: let 
+  scpPort = 2277; # let-bindings or custom flake-parts options communicate values across classes
+in {
   flake.modules.nixos.ssh = {
-    # Linux config: server, firewall-ports, etc.
+    # Linux config: setup OpenSSH server, firewall-ports, etc.
   };
 
   flake.modules.darwin.ssh = {
-    # MacOS config: enable builtin ssh server, etc.
+    # MacOS config: enable MacOS builtin ssh server, etc.
   };
 
   flake.modules.homeManager.ssh = {
-    # setup ~/.ssh/config or keys.
+    # setup ~/.ssh/config, authorized_keys, private keys secrets, etc.
   };
 
   perSystem = {pkgs, ...}: {
-    # expose custom package/checks/devshells by this aspect.
+    # custom packages taking advantage of ssh facilities, eg deployment-scripts.
   };
 }
 ```
@@ -62,7 +68,7 @@ in
   };
 
   flake.modules.darwin.${userName} = {
-     system.primaryUser = userName; # configuring a user is different on MacOS than on NixOS.
+     system.primaryUser = userName; # note that configuring a user is different on MacOS than on NixOS.
   };
 
   flake.modules.homeManager.${userName} =
@@ -100,7 +106,7 @@ All files being flake-parts modules, means we have no need for manually importin
 loaded at once into a single import.
 
 The Dendritic community commonly uses [`vic/import-tree`](https://github.com/vic/import-tree) for this.
-Note: import-tree ignores any file that has an `_` anywhere as part of its path.
+Note: import-tree ignores any file that has an `/_` as part of its path.
 
 ```nix
 # flake.nix
@@ -123,9 +129,9 @@ This means we can have:
 Instead of having huge `flake.nix` files with lots of nix logic inside. It is now possible
 to move all nix logic into well organized auto-imported flake-parts in `./modules`. This way, `flake.nix` serves more as a manifest of dependencies and flake entrypoint.
 
-Some people go a step further and use [vic/flake-file](https://github.com/vic/flake-file) to manage their flake.nix automatically, by letting each flake-part module also define the flake inputs needed by each module.
+Some people go a step further and use [`vic/flake-file`](https://github.com/vic/flake-file) to manage their flake.nix automatically, by letting each flake-parts module also define the flake inputs needed by each module.
 
-Any flake-parts module can contribute to flake.nix as needed, either inputs/flake-configuration (by using `vic/flake-file`) or outputs (modules/packages/checks/osConfigurations/etc).
+Any flake-parts module contributes to flake.nix as needed, either inputs/flake-configuration (by using `vic/flake-file`) or outputs (modules/packages/checks/osConfigurations/etc by using flake-parts options).
 
 ```nix
 # ./modules/home/vim.nix
@@ -140,15 +146,17 @@ Any flake-parts module can contribute to flake.nix as needed, either inputs/flak
 
 ### Feature Centric instead of Host Centric.
 
-As noted by Pol Dellaiera in [Flipping the Configuration Matrix](https://not-a-number.io/2025/refactoring-my-infrastructure-as-code-configurations/#flipping-the-configuration-matrix):
+As noted by Pol Dellaiera in [Flipping the Configuration Matrix](https://not-a-number.io/2025/refactoring-my-infrastructure-as-code-configurations/#flipping-the-configuration-matrix) -a very recommended read-:
 
-> the configuration is now structured around features, not hostnames. It is a shift in the axis of composition, essentially an inversion of configuration control. What may seem like a subtle change at first has profound implications for flexibility, reuse, and maintainability.
+> [In a Dendritic setup] the configuration is now structured around features, not hostnames. It is a shift in the axis of composition, essentially an inversion of configuration control. What may seem like a subtle change at first has profound implications for flexibility, reuse, and maintainability.
 
 You will notice that you start naming your files around the `aspect`s (features) they define
 instead of where they are specifically applied.
 
+It might be useful to ask yourself **_how_** you like to use your Linux Environment, instead of **_what_** components constitute the environment or **_where_** will the environment finally applied. By doing so, you will start naming your aspects around "usability concerns", eg. `macos-like-bindings`, `scrolling-desktop`, `tui` interfaces, nextgen `cli` utilities, `ai` intergation, etc. Instead of naming modules around specific packages or host-names.
+
 In the following example, the `scrolling-desktop` aspect is included accross different operating systems:
-On Linux, `flake.modules.nixos.scrolling-destop` might enable [`niri`](https://variety4me.github.io/niri_docs/) and on MacOS, `flake.modules.darwin.scrolling-desktop` might enable [`PaperWM.spoon`](https://github.com/mogenson/PaperWM.spoon).
+On Linux, `flake.modules.nixos.scrolling-desktop` might enable [`niri`](https://variety4me.github.io/niri_docs/) and on MacOS, `flake.modules.darwin.scrolling-desktop` might enable [`paneru`](https://github.com/karinushka/paneru). Each configuration uses the tools available on the respective platform, but the aspect is the same, and you could use flake-parts level options or let-bindings to configure behaviour on both (e.g, the scrolling animations speed).
 
 ```nix
 # ./modules/hosts.nix
@@ -164,6 +172,8 @@ On Linux, `flake.modules.nixos.scrolling-destop` might enable [`niri`](https://v
   };
 }
 ```
+
+
 
 ### Feature _Closures_
 
@@ -191,12 +201,42 @@ other impact than the overall capabilities provided into your systems.
 This is an easy way to disable loading files while on a huge refactor. Or when some hosts
 or features should be decommissioned immediately/temporarily.
 
-### No dependencies other than flake-parts
+### No dependencies
 
-Since the dendritic pattern builds around flake-parts modules, the only dependency is
-`flake-parts`. You can load files using import-tree or any other means. You can also use
-any flake-parts based library to define your configurations, like [Unify](https://codeberg.org/quasigod/unify),
-as long as it exposes `flake.modules.<class>.<aspect>` attribute sets.
+> _Dendritic_ is a configuration *pattern* - a _way-of-doing_-, not a library nor a framework.
+
+The Dendritic repository has no code at all and any libraries mentioned on this document are mere recommendations and pointers to things other people using the Dendritic pattern has found useful.
+
+You are free and encouraged to explore new ways of doing or wiring Dendritic setups. Be sure to share your insights with the community.
+
+Because all of this, there are many possible implementations of the Dendritic pattern.
+
+Some people like to use inline-style definitions: 
+
+```nix
+{ inputs, ... }:
+{
+  flake.modules.<class1>.<aspect1> = { ... };
+  flake.modules.<class2>.<aspect1> = { ... };
+  flake.modules.<class3>.<aspect1> = { ... };
+}
+```
+
+Others might prefer nested modules using libs like [unify](https://codeberg.org/quasigod/unify) or [`vic/flake-aspects`](https://github.com/vic/flake-aspects):
+
+All is good as long as you expose `flake.modules.<class>.<aspect>` attribute sets.
+
+```nix
+# using vic/flake-aspects:
+{ inputs, ... }:
+{
+  flake.aspects.<aspect1> = {
+    <class1> = { ... };
+    <class2> = { ... };
+    <class3> = { ... };
+  };
+}
+```
 
 ### Dendritic community.
 
