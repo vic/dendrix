@@ -13,7 +13,7 @@ And `<aspect>` is the _cross-cutting concern_ or _feature_ that is being configu
 one or more of these classes.
 
 > [!NOTE]
-> Dendritic is a configuration *pattern* - a way-of-doing-. Not a library nor a framework.
+> Dendritic is a configuration _pattern_ - a way-of-doing-. Not a library nor a framework.
 > See [No Dependencies](#no-dependencies).
 
 ### Example of a dendritic configuration.
@@ -23,7 +23,7 @@ As an example of what a dendritic nix config looks like, suppose we want to conf
 
 ```nix
 # modules/ssh.nix -- like every other file inside modules, this is a flake-parts module.
-{ inputs, config, ... }: let 
+{ inputs, config, ... }: let
   scpPort = 2277; # let-bindings or custom flake-parts options communicate values across classes
 in {
   flake.modules.nixos.ssh = {
@@ -173,8 +173,6 @@ On Linux, `flake.modules.nixos.scrolling-desktop` might enable [`niri`](https://
 }
 ```
 
-
-
 ### Feature _Closures_
 
 By closure, we mean: everything that is needed for a given _feature_ to work is
@@ -203,7 +201,7 @@ or features should be decommissioned immediately/temporarily.
 
 ### No dependencies
 
-> _Dendritic_ is a configuration *pattern* - a _way-of-doing_-, not a library nor a framework.
+> _Dendritic_ is a configuration _pattern_ - a _way-of-doing_-, not a library nor a framework.
 
 The Dendritic repository has no code at all and any libraries mentioned on this document are mere recommendations and pointers to things other people using the Dendritic pattern has found useful.
 
@@ -211,7 +209,7 @@ You are free and encouraged to explore new ways of doing or wiring Dendritic set
 
 Because all of this, there are many possible implementations of the Dendritic pattern.
 
-Some people like to use inline-style definitions: 
+Some people like to use inline-style definitions:
 
 ```nix
 { inputs, ... }:
