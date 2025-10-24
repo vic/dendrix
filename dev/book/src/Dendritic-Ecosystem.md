@@ -4,7 +4,7 @@ The following is a partial list of resources, such as guides, libraries, famewor
 
 They are not listed in any order of preference, instead we try to group then by how they relate to each other.
 
-You can also try [searching github][https://github.com/search?q=%28dendritic+language%3ANix%29+OR+%28dendritic+flake+language%3AMarkdown%29&type=code] to discover awesome dendritic implementations. Be sure to send a PR if you have anything valuable for the community.
+You can also try [searching github](https://github.com/search?q=%28dendritic+language%3ANix%29+OR+%28dendritic+flake+language%3AMarkdown%29&type=code) to discover awesome dendritic implementations. Be sure to send a PR if you have anything valuable for the community.
 
 ## Talking to people in the community
 
@@ -22,6 +22,10 @@ We also list some personal repos that you might find interesting, and perhaps th
 be of inspiration for new libraries that benefit the community as well.
 
 ## Personal Repositories - Dendritic Implementations.
+
+- [drupol/infra](https://github.com/drupol/infra)
+- [mightyiam/infra](https://github.com/mightyiam/infra)
+- [vic/vix](https://github.com/vic/vix)
 
 ## Libraries
 
