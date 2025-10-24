@@ -203,38 +203,12 @@ or features should be decommissioned immediately/temporarily.
 
 > _Dendritic_ is a configuration _pattern_ - a _way-of-doing_-, not a library nor a framework.
 
-The Dendritic repository has no code at all and any libraries mentioned on this document are mere recommendations and pointers to things other people using the Dendritic pattern has found useful.
+The Dendritic repository has no code at all, any [libraries mentioned](Dendritic-Ecosystem.html) on this guide are mere recommendations and pointers to things other people using the Dendritic pattern has found useful.
 
 You are free and encouraged to explore new ways of doing or wiring Dendritic setups. Be sure to share your insights with the community.
 
 Because all of this, there are many possible implementations of the Dendritic pattern.
-
-Some people like to use inline-style definitions:
-
-```nix
-{ inputs, ... }:
-{
-  flake.modules.<class1>.<aspect1> = { ... };
-  flake.modules.<class2>.<aspect1> = { ... };
-  flake.modules.<class3>.<aspect1> = { ... };
-}
-```
-
-Others might prefer nested modules using libs like [unify](https://codeberg.org/quasigod/unify) or [`vic/flake-aspects`](https://github.com/vic/flake-aspects):
-
-All is good as long as you expose `flake.modules.<class>.<aspect>` attribute sets.
-
-```nix
-# using vic/flake-aspects:
-{ inputs, ... }:
-{
-  flake.aspects.<aspect1> = {
-    <class1> = { ... };
-    <class2> = { ... };
-    <class3> = { ... };
-  };
-}
-```
+Some brave souls are even exploring Dendritic setups outside flakes/flake-parts.
 
 ### Dendritic community.
 
