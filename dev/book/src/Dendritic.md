@@ -47,7 +47,7 @@ in {
 That's it. This is what Dendritic is all about. By following this configuration pattern you
 will notice your code now incorporates the following:
 
-## Denritic Advantages
+## Dendritic Advantages
 
 ### No need to use `specialArgs` for communicating values.
 
