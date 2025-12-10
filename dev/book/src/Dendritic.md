@@ -208,7 +208,9 @@ The Dendritic repository has no code at all, any [libraries mentioned](Dendritic
 You are free and encouraged to explore new ways of doing or wiring Dendritic setups. Be sure to share your insights with the community.
 
 Because all of this, there are many possible implementations of the Dendritic pattern.
-Some brave souls are even exploring Dendritic setups outside flakes/flake-parts.
+
+It is also possible to have Dendritic setups **without** flakes/flake-parts.
+See [vic/dendritic-unflake](https://github.com/vic/dendritic-unflake).
 
 ### Dendritic community.
 
